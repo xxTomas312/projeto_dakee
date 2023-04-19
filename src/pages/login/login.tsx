@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React  from 'react';
 
 function Login_page() {
     
     return(
         <>
-            afsafsaf
+        <div>
+        <h1>cê tá de sacanagem</h1>
+        </div>
         </>
     )
 }
