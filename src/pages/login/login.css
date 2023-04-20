@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --background-color: linear-gradient(
+    180deg,
+    #ea4f32 0%,
+    #f06b52 0.01%,
+    #f45033 0.02%,
+    #e80f5d 100%
+  );
+
+  --color-primary: #fff;
+  --color-secondary: #f0694f;
+  --color-muted: #ffabab;
+
+  --chat-bubble-theirs: #e9135c;
+  --chat-bubble-theirs-border: #f0694f;
+  --chat-bubble-yours: #e9135c;
+
+  --notification-color: #e80f5d;
+
+  --default-padding: 50px;
+}
+
+
+
+.first_page,
+.second_page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  top: 0%;
+}
+
+/*Posição dos elements*/
+.first_page {
+    left: 0;
+  }
+.second_page {
+    left: 100%;
+  }
+
+body{
+    background-color: var(--background-color);
+}

@@ -8,8 +8,6 @@ RUN pip install sqlalchemy
 
 RUN pip install pydantic
 
-RUN npm install react-router-dom
-
 RUN poetry config virtualenvs.create false
 
 WORKDIR /workspace
