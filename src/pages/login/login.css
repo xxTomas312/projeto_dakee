@@ -1,3 +1,27 @@
+:root {
+    --background-color: linear-gradient(
+      180deg,
+      #ea4f32 0%,
+      #f06b52 0.01%,
+      #f45033 0.02%,
+      #e80f5d 100%
+    );
+  
+    --color-white: #fff;
+    --color-secondary: #f0694f;
+    --text-color: #FFBABA;
+  
+    --chat-bubble-theirs: #e9135c;
+    --chat-bubble-theirs-border: #f0694f;
+    --chat-bubble-yours: #e9135c;
+  
+    --notification-color: #e80f5d;
+  
+    --default-padding: 50px;
+    --default-title-size: xxx-large;
+    --default-subtitle-size: 26px;
+  }
+
 .login_page{
     width: 100%;
     height: 100vh;
@@ -14,7 +38,6 @@
     width: 100%;
     height: 15%;
     padding-top: 10%;
-  
 }
 
 .text_container{
@@ -43,7 +66,110 @@
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+    cursor: pointer;
 
     color: white;
+}
+
+
+
+
+/* SIGN UP PAGE */
+
+.signUp_page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+
+    background: var(--background-color);
+}
+.go-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.signUp_page>.slogan_container{
+    padding-top: 29.5%;
+}
+
+body>.signUp_page>.subtitle_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body>.signUp_page>.subtitle_container>h2{
+    width: 80%;
+}
+
+.info_container{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.info_container>input{
+    width: 100%;
+    height: 25%;
+    background: transparent;
+    border-bottom: 1px solid var(--color-white);
+    border-top:none;
+    border-left: none;
+    border-right: none;
+}
+
+.info_container>input:focus{
+    height: 24%;
+    outline: none;
+}
+
+.signUp_page>.button_container{
+    padding-top: 13%;
+    width: 81%;
+    height: 8.5%;
+}
+.signUp_page>.button_container>button{
+    width: 250px;
+    height: 100%;
+}
+
+.social_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    padding-top: 5%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+.social_info>.social_media{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social_info>.social_media>img{
+    width: 18%;
+}
+.social_info>.social_media>.gmail_icon{
+    padding-top: 1%;
+    width: 21%;
+}
+.social_info>.social_media>.apple_icon{
+    width: 16%;
 }
 
