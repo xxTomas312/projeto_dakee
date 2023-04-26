@@ -5,6 +5,8 @@ import facebook from '../../images/face_icon.png'
 import Gmail from '../../images/gmail_icon.png'
 import Apple from '../../images/apple_icon.png'
 import Back_button from '../../images/back_b.png'
+import './signUp.css'
+import '../../App.css'
 
 
 function Sign_up() {
@@ -33,12 +35,12 @@ function Sign_up() {
             <button>Sign up</button>
             </div>
             <div className='social_info'>
-            <p>or sign up using:</p>
-            <div className='social_media'>
-                <img src={facebook} alt="Facebook" />
-                <img className='gmail_icon' src={Gmail} alt="Gmail" />
-                <img className='apple_icon' src={Apple} alt="Apple" />
-            </div>
+                <p>or sign up using:</p>
+                <div className='social_media'>
+                    <img className='facebook_icon' src={facebook} alt="Facebook" />
+                    <img className='gmail_icon' src={Gmail} alt="Gmail" />
+                    <img className='apple_icon' src={Apple} alt="Apple" />
+                </div>
             </div>
         </section>
         </>

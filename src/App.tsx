@@ -6,7 +6,7 @@ import Tutorial from './pages/tutorial/tutorial';
 import Questionaire from './pages/questionaire/questionaire';
 import Home from './pages/home/home';
 import SignUp from './pages/signUp/signUp';
-import './App.css';
+
 
 function App() {
   return (  

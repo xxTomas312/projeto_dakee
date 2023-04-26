@@ -1,0 +1,66 @@
+:root {
+    --background-color: linear-gradient(
+      180deg,
+      #ea4f32 0%,
+      #f06b52 0.01%,
+      #f45033 0.02%,
+      #e80f5d 100%
+    );
+  
+    --color-white: #fff;
+    --text-color: #FFBABA;
+}
+
+
+.home_body{
+    width: 100%;
+    height: 100%;
+}
+
+/*-SWIPER-*/
+.container{
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px 15px;
+    padding-right: 20px 15px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+  }
+
+.tutorial_page_1,
+.tutorial_page_2,
+.tutorial_page_3,
+.tutorial_page_4,
+.tutorial_page_5{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+
+  
+    top: 0%;
+}
+
+/*Posição dos elements*/
+.tutorial_page_1 {
+    left: 0;
+}
+.tutorial_page_2 {
+    left: 100%;
+}
+.tutorial_page_3 {
+    left: 200%;
+}
+.tutorial_page_4 {
+    left: 300%;
+}
+.tutorial_page_5 {
+    left: 400%;
+}

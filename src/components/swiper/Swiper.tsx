@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { getRefValue, useSatateRef } from '../../lib/hooks';
 import { SwiperItemType } from '../types';
-import '../swiper/Swiper.css'
+import './Swiper.css'
+import './SwiperItem.css'
 import SwiperItem from './SwiperItem';
 import { getTouchEventData } from '../../lib/dom';
 
@@ -46,9 +47,9 @@ function Swiper({ items }: Props) {
     let newOffsetX = getRefValue(offsetXRef);
 
     const diff = currentOffsetX - newOffsetX;
-    {
-      /*Math.abs para obter sempre um numero positivo*/
-    }
+
+      //Math.abs para obter sempre um numero positivo
+
     if (Math.abs(diff) > MIN_SWIPE_REQUIRED) {
       // Swipe para direita se diff for positivo
       if (diff > 0) {
@@ -62,9 +63,9 @@ function Swiper({ items }: Props) {
       newOffsetX = Math.round(newOffsetX / containerWidth) * containerWidth;
     }
 
-    {
-      /*Formula to Swipe*/
-    }
+
+      //Formula to Swipe
+
     newOffsetX = Math.round(newOffsetX / containerWidth) * containerWidth;
 
     setIsSwiping(false);
