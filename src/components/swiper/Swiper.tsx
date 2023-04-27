@@ -1,120 +1,67 @@
-import React, { useRef, useState } from 'react';
-import { getRefValue, useSatateRef } from '../../lib/hooks';
-import { SwiperItemType } from '../types';
-import './Swiper.css'
-import './SwiperItem.css'
-import SwiperItem from './SwiperItem';
-import { getTouchEventData } from '../../lib/dom';
+import React, { useState, useRef } from 'react';
+import './Swiper.css';
 
-export interface Props {
-  items: SwiperItemType[];
+interface SwiperProps {
+  items: JSX.Element[];
 }
 
-const MIN_SWIPE_REQUIRED = 40;
+const Swiper: React.FC<SwiperProps> = ({ items }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
 
-function Swiper({ items }: Props) {
-  const containerRef = useRef<HTMLUListElement>(null);
-  const containerWidthRef = useRef(0);
-  const minOffsetXRef = useRef(0);
-  const currentOffsetXRef = useRef(0);
-  const startXRef = useRef(0);
-
-  const [isSwiping, setIsSwiping] = useState(false);
-  const [offsetX, setOffsetX, offsetXRef] = useSatateRef(0);
-
-  const onTouchMove = (e: TouchEvent | MouseEvent) => {
-    const currentX = getTouchEventData(e).clientX;
-    const diff = getRefValue(startXRef) - currentX;
-    let newOffsetX = getRefValue(currentOffsetXRef) - diff;
-
-    const maxOffsetX = 0;
-    const minOffsetX = getRefValue(minOffsetXRef);
-
-    if (newOffsetX > maxOffsetX) {
-      newOffsetX = 0;
-    }
-
-    if (newOffsetX < minOffsetX) {
-      newOffsetX = minOffsetX;
-    }
-
-    setOffsetX(newOffsetX);
-  };
-
-  const onTouchEnd = () => {
-    const containerWidth = getRefValue(containerWidthRef);
-    const currentOffsetX = getRefValue(currentOffsetXRef);
-    let newOffsetX = getRefValue(offsetXRef);
-
-    const diff = currentOffsetX - newOffsetX;
-
-      //Math.abs para obter sempre um numero positivo
-
-    if (Math.abs(diff) > MIN_SWIPE_REQUIRED) {
-      // Swipe para direita se diff for positivo
-      if (diff > 0) {
-        newOffsetX = Math.floor(newOffsetX / containerWidth) * containerWidth;
-      }
-      // Swipe para a esquerda se diff for negativo
-      else {
-        newOffsetX = Math.ceil(newOffsetX / containerWidth) * containerWidth;
-      }
+  const handleNext = () => {
+    if (currentIndex === items.length - 1) {
+      setCurrentIndex(0);
     } else {
-      newOffsetX = Math.round(newOffsetX / containerWidth) * containerWidth;
+      setCurrentIndex(currentIndex + 1);
     }
-
-
-      //Formula to Swipe
-
-    newOffsetX = Math.round(newOffsetX / containerWidth) * containerWidth;
-
-    setIsSwiping(false);
-    setOffsetX(newOffsetX);
-
-    window.removeEventListener('touchmove', onTouchMove);
-    window.removeEventListener('touchend', onTouchEnd);
-    window.removeEventListener('mousemove', onTouchMove);
-    window.removeEventListener('mouseup', onTouchEnd);
   };
 
-  const onTouchStart = (
-    e: React.TouchEvent<HTMLDivElement> | React.MouseEvent<HTMLDivElement>
-  ) => {
-    setIsSwiping(true);
+  const handlePrev = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(items.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
 
-    currentOffsetXRef.current = getRefValue(offsetXRef);
-    startXRef.current = getTouchEventData(e).clientX;
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
 
-    const containerEl = getRefValue(containerRef);
-    const containerWidth = containerEl.offsetWidth;
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = event.changedTouches[0].clientX;
+    handleSwipe();
+  };
 
-    containerWidthRef.current = containerWidth;
-
-    minOffsetXRef.current = containerWidth - containerEl.scrollWidth;
-
-    window.addEventListener('touchmove', onTouchMove);
-    window.addEventListener('touchend', onTouchEnd);
-    window.addEventListener('mousemove', onTouchMove);
-    window.addEventListener('mouseup', onTouchEnd);
+  const handleSwipe = () => {
+    const difference = touchStartX.current - touchEndX.current;
+    const threshold = 100;
+    if (difference > threshold) {
+      handleNext();
+    } else if (difference < -threshold) {
+      handlePrev();
+    }
   };
 
   return (
-    <div
-      className="swiper-container"
-      onTouchStart={onTouchStart}
-      onMouseDown={onTouchStart}
-    >
-      <ul
-        ref={containerRef}
-        className={`swiper-list ${isSwiping ? 'swiping' : ''}`}
-        style={{ transform: `translate3d(${offsetX}px , 0, 0)` }}
-      >
-        {items.map((item, idx) => (
-          <SwiperItem key={idx} {...item} />
+    <div className="swiper-container" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+      <div className="swiper-wrapper" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {items.map((item, index) => (
+          <div key={index} className="swiper-slide">
+            {item}
+          </div>
         ))}
-      </ul>
+      </div>
+      <button className="swiper-prev" onClick={handlePrev}>
+        Prev
+      </button>
+      <button className="swiper-next" onClick={handleNext}>
+        Next
+      </button>
     </div>
   );
-}
+};
 
 export default Swiper;

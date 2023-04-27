@@ -78,6 +78,17 @@ body{
   outline: none;
 }
 
+input{
+  display: flex;
+  text-align:center;
+  color: var(--color-white);
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+}
 input::placeholder{
   font-family: 'Inter';
   font-style: normal;
@@ -102,7 +113,19 @@ input:focus{
   color: var(--text-color);
 }
 
+
+
+/*SOCIAL MEDIA ICONS*/
+
+.social_media{
+  width: 100%;
+}
 .social_info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -111,13 +134,62 @@ input:focus{
   text-align: center;
   color: var(--text-color);
 }
-
 .social_info>p{
   opacity: 0.8;
 }
 
+.social_info>.social_media>.gmail_icon{
+  width: 20%;
+}
+.social_info>.social_media>.apple_icon{
+  width: 16%;
+  padding-bottom: 1%;
+}
+.social_info>.social_media>.facebook_icon{
+  width: 18%;
+}
 .gmail_icon,
 .apple_icon,
 .facebook_icon{
     cursor: pointer;
+}
+
+
+
+/*Slogan Container Height*/
+.slogan_container>img{
+  padding-top: 22.8%;
+}
+
+/*BUTTON CSS*/
+/*Normal button*/
+button{
+  width: 230px;
+  height: 68px;
+  background: transparent;
+  border-radius: 40px;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*Back button*/
+.go-back{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  width: 100%;
+  display: flex;
+  padding-top: 10%;
+  padding-left: 2%;
+  background: transparent;
+  border: none;
 }

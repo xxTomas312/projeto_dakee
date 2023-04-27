@@ -33,9 +33,9 @@ function Login_page() {
 
         {aberto ? (
           <section className="login_page">
-            <button className="go-back" onClick={() => setAberto(false)}>
-                <button><img src={Back_button} alt="Back button" /></button>
-            </button>
+            <div className="go-back" onClick={() => setAberto(false)}>
+                <img src={Back_button} alt="Back button" />
+            </div>
             <div className='slogan_container'>
               <img src={Logo_img} alt="Logo slogan" />
             </div>

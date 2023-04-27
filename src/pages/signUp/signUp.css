@@ -17,27 +17,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-}
-
-.signUp_page>.go-back{
-    width: 104%;
-    display: flex;
-    padding-top: 10%;
-    padding-left: 3.5%;
-    background: transparent;
-    border: none;
-}
-
-.signUp_page>.slogan_container>img{
-    padding-top: 10.3%;
 }
 
 .signUp_page>.subtitle_container{
-    height: 16.5%;
-    width: 89%;
-    margin-top: 9.7%;
-    margin-left: 4.7%;
+  height: 16.5%;
+  width: 89%;
+  margin-top: 9.7%;
+  margin-left: 4.7%;
 }
 
 .signUp_page>.info_container{
@@ -60,16 +46,5 @@
 
 .signUp_page>.social_info>.social_media{
     width: 100%;
-
 }
 
-.signUp_page>.social_info>.social_media>.gmail_icon{
-    width: 20%;
-}
-.signUp_page>.social_info>.social_media>.apple_icon{
-    width: 15%;
-    padding-bottom: 1%;
-}
-.signUp_page>.social_info>.social_media>.facebook_icon{
-    width: 18%;
-}
