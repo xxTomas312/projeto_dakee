@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './Swiper.css';
+import '../../App.css'
+import LogoSmall from '../../images/logoSmall.png'
 
 interface SwiperProps {
   items: JSX.Element[];
@@ -9,10 +11,11 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
+  const swiperRef = useRef<HTMLDivElement>(null);
 
   const handleNext = () => {
     if (currentIndex === items.length - 1) {
-      setCurrentIndex(0);
+      return; // se for a última página, não faça nada
     } else {
       setCurrentIndex(currentIndex + 1);
     }
@@ -20,7 +23,7 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
 
   const handlePrev = () => {
     if (currentIndex === 0) {
-      setCurrentIndex(items.length - 1);
+      return; // se for a primeira página, não faça nada
     } else {
       setCurrentIndex(currentIndex - 1);
     }
@@ -45,8 +48,17 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
     }
   };
 
+  const handleGoToLast = () => {
+    setCurrentIndex(items.length - 1);
+    if (swiperRef.current) {
+      swiperRef.current.scrollLeft = swiperRef.current.scrollWidth;
+    }
+  };
   return (
     <div className="swiper-container" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+      <div className='logo_container'>
+        <img src={LogoSmall} alt="" />
+      </div>
       <div className="swiper-wrapper" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {items.map((item, index) => (
           <div key={index} className="swiper-slide">
@@ -54,12 +66,17 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
           </div>
         ))}
       </div>
-      <button className="swiper-prev" onClick={handlePrev}>
-        Prev
-      </button>
-      <button className="swiper-next" onClick={handleNext}>
-        Next
-      </button>
+      <div className='button_container'>
+        <button className="swiper-prev" onClick={handlePrev}>
+          Prev
+        </button>
+        <button className="swiper-next" onClick={handleNext}>
+          Next
+        </button>
+        <p className="go-to-last" onClick={handleGoToLast}>
+          Skip the tutorial
+        </p>
+      </div>
     </div>
   );
 };

@@ -11,4 +11,45 @@
     --text-color: #FFBABA;
 }
 
+.tutorial_page_1,
+.tutorial_page_3{
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 23%;
+  height: 73vh;
+}
 
+.img_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15%;
+  padding-top: 2%;
+}
+
+.text_container{
+  text-align: start;
+}
+
+.ellipse_container{
+  display: flex;
+  justify-content: center;
+  margin-top: 42%;
+}
+
+/*Tutorial Page 2*/
+.tutorial_page_2{
+  height: 70vh;
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 23%;
+}
+.tutorial_page_2>.subtitle_container{
+  margin-top: 23%;
+}
+.tutorial_page_2>.ellipse_container{
+  margin-top: 49.5%;
+}
+.tutorial_page_2>.img_container{
+  padding-bottom: 4%;
+}

@@ -41,6 +41,7 @@ body{
 }
 
 .text,
+.go-to-last,
 .text_container{
   font-family: 'Inter';
   font-style: normal;
@@ -63,6 +64,19 @@ body{
   color: var(--color-white);
 }
 
+/*INPUT'S CSS*/
+input{
+  display: flex;
+  text-align:center;
+  color: var(--color-white);
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+}
+
 .info_container>input{
   width: 83%;
   height: 40px;
@@ -78,17 +92,6 @@ body{
   outline: none;
 }
 
-input{
-  display: flex;
-  text-align:center;
-  color: var(--color-white);
-
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 18px;
-}
 input::placeholder{
   font-family: 'Inter';
   font-style: normal;
@@ -163,7 +166,10 @@ input:focus{
 
 /*BUTTON CSS*/
 /*Normal button*/
-button{
+button,
+.swiper-prev,
+.swiper-next
+{
   width: 230px;
   height: 68px;
   background: transparent;
