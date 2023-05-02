@@ -12,44 +12,121 @@
 }
 
 .tutorial_page_1,
-.tutorial_page_3{
+.tutorial_page_2,
+.tutorial_page_3,
+.tutorial_page_4,
+.tutorial_page_5{
   padding-left: 13%;
   padding-right: 13%;
-  padding-top: 23%;
-  height: 73vh;
+  padding-top: 30%;
+  height: 75vh;
 }
 
+/*PAGES IMAGES*/
 .img_container{
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 15%;
-  padding-top: 2%;
+  margin-bottom: 22%;
+  margin-top: 22%;
+}
+.tutorial_page_4>.img_container{
+  margin-bottom: 18%;
+  margin-top: 20%;
+}
+.tutorial_page_4>.img_container>img{
+  width: 28%;
 }
 
 .text_container{
+  height: 40%;
   text-align: start;
 }
 
+
+
+/*ELLIPSE FROM ALL PAGES*/
+/* Page 1 */
 .ellipse_container{
   display: flex;
   justify-content: center;
-  margin-top: 42%;
+  position: absolute;
+}
+.tutorial_page_1>.ellipse_container{
+  left: 37%;
+  bottom: 0.2%;
+}
+/* Page 2 */
+.tutorial_page_2>.ellipse_container{
+  left: 136.1%;
+  bottom: 0.2%;
+}
+/* Page 3 */
+.tutorial_page_3>.ellipse_container{
+  width: 100%;
+  left: 200%;
+  bottom: -0.7%;
+}
+.tutorial_page_3>.ellipse_container>img{
+  width: 36%;
+}
+/* Page 4 */
+.tutorial_page_4>.ellipse_container{
+  width: 100%;
+  left: 300%;
+  bottom: -1.3%;
+}
+.tutorial_page_4>.ellipse_container>img{
+  width: 36%;
 }
 
-/*Tutorial Page 2*/
-.tutorial_page_2{
-  height: 70vh;
-  padding-left: 13%;
-  padding-right: 13%;
-  padding-top: 23%;
-}
+
+/*TUTORIAL PAGES*/
+
+
+/*TUTORIAL PAGE 2*/
 .tutorial_page_2>.subtitle_container{
-  margin-top: 23%;
+  margin-top: 24%;
 }
-.tutorial_page_2>.ellipse_container{
-  margin-top: 49.5%;
+
+.tutorial_page_2>.text_container{
+  height: 39.5%;
 }
-.tutorial_page_2>.img_container{
-  padding-bottom: 4%;
+
+/*TUTORIAL PAGE 3*/
+.tutorial_page_3>.subtitle_container{
+  margin-top: 23.3%;
+}
+
+
+/*TUTORIAL PAGE 4*/
+.tutorial_page_4>.subtitle_container{
+  margin-top: 23.3%;
+}
+.tutorial_page_4>.text_container{
+  height: 21%;
+}
+.tutorial_page_4>.button_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/*TUTORIAL PAGE 5*/
+.tutorial_page_5>.subtitle_container{
+  margin-top: 65%;
+}
+.tutorial_page_5>.subtitle_container>H2{
+  margin: 0;
+}
+.tutorial_page_5>.text_container{
+  opacity: 0.8;
+  height: 13%;
+}
+.tutorial_page_5>.button_container{
+  width: 102%;
+  display: flex;
+  justify-content: center;
 }
