@@ -1,7 +1,11 @@
 import React, { useState, useRef } from 'react';
 import './Swiper.css';
 import '../../App.css'
+import '../../pages/tutorial/tutorial.css'
+import '../../pages/questionaire/questionaire.css'
 import LogoSmall from '../../images/logoSmall.png'
+import Back_button from '../../images/back_b.png'
+
 
 interface SwiperProps {
   items: JSX.Element[];
@@ -68,7 +72,7 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
       </div>
       <div className='button_container'>
         <button className="swiper-prev" onClick={handlePrev}>
-          Prev
+          <img src={Back_button} alt="Back button" />
         </button>
         <button className="swiper-next" onClick={handleNext}>
           Next

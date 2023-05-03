@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import Swiper from '../../components/swiper/Swiper';
 import Ellipse1 from '../../images/Ellipse1.png'
@@ -9,11 +10,11 @@ import IMG_2 from '../../images/tutorialIMG2.png'
 import IMG_3 from '../../images/tutorialIMG3.png'
 import IMG_4 from '../../images/tutorialIMG4.png'
 
+import '../../App.css'
 import './tutorial.css'
 
-
-
 const items = [
+  //PAGE 1
   <div className='tutorial_page_1' key="1">
     <div className='subtitle_container'>
       <h2>Hi, Jane! <br/> Here's a short <br/> tutorial for you: </h2>
@@ -33,7 +34,8 @@ const items = [
       <img src={Ellipse1} alt="Ellipse 1" />
     </div>
   </div>,
-  
+
+  //PAGE 2
   <div className='tutorial_page_2' key="2">
     <div className='subtitle_container'>
       <h2>Who is <br/>a Traveller?  </h2>
@@ -54,6 +56,7 @@ const items = [
     </div>
   </div>,
 
+  //PAGE 3
   <div className='tutorial_page_3' key="3">
     <div className='subtitle_container'>
       <h2>Who is <br/>a Local?</h2>
@@ -76,6 +79,7 @@ const items = [
     </div>
   </div>,
 
+  //PAGE 4
   <div className='tutorial_page_4' key="4">
   <div className='subtitle_container'>
     <h2>Congrats,<br/> you’re both!</h2>
@@ -87,14 +91,15 @@ const items = [
     <p>As a Dakee user, you are both a Traveller and a Local.</p>
     <p>Gain discounts by giving advices to visitors and get the unforgettable local experience while travelling!</p>
   </div>
-  <div className='button_container'>
-    <button>Done</button>
+  <div className='Swipe_container'>
+    <h2>Swipe left</h2>
   </div>
   <div className='ellipse_container'>
     <img src={Ellipse4} alt="Ellipse 1" />
   </div>
   </div>,
 
+  //PAGE 5
   <div className='tutorial_page_5' key="5">
   <div className='subtitle_container'>
     <h2>Done!</h2>
@@ -107,12 +112,12 @@ const items = [
     <p>You can edit your anwsers later.</p>
   </div>
   <div className='button_container'>
-    <button>Done</button>
+  <Link to="/Questionaire"><button>OK</button></Link>
   </div>
   </div>,
 ];
 
-const App: React.FC = () => {
+const tutorial_page: React.FC = () => {
   return (
     <div>
       <Swiper items={items} />
@@ -120,4 +125,6 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default tutorial_page;
+
+

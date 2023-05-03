@@ -6,7 +6,7 @@ import facebook from '../../images/face_icon.png'
 import Gmail from '../../images/gmail_icon.png'
 import Apple from '../../images/apple_icon.png'
 import Back_button from '../../images/back_b.png'
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function Login_page() {
@@ -40,7 +40,7 @@ function Login_page() {
               <img src={Logo_img} alt="Logo slogan" />
             </div>
             <div className='subtitle_container'>
-              <h2>Login <br/>with e-mail</h2>
+              <h2>Log in </h2>
             </div>
             <div className='info_container'>
               <input className='info_input' type="text" placeholder='E-mail'/>
