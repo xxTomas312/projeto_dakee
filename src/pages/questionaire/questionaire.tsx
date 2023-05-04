@@ -47,10 +47,12 @@ const items = [
     <div className='questionaire_page_3' key="3">
         <h1>3/4</h1>
         <h3>I currently live in:</h3>
-        <input type="text" placeholder='City, Country'/>
-        <br />
-        <h3>I can give advices for:</h3>
-        <input type="text" placeholder='City, Country'/>
+        <div className='info_container'>
+          <input type="text" placeholder='City, Country'/>
+          <br />
+          <h3>I can give advices for:</h3>
+          <input type="text" placeholder='City, Country'/>
+        </div>
     </div>,
     //PAGE 4
     <div className='questionaire_page_4' key="4">
