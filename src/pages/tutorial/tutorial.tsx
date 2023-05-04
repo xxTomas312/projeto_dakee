@@ -92,7 +92,7 @@ const items = [
     <p>Gain discounts by giving advices to visitors and get the unforgettable local experience while travelling!</p>
   </div>
   <div className='Swipe_container'>
-    <h2>Swipe left</h2>
+    
   </div>
   <div className='ellipse_container'>
     <img src={Ellipse4} alt="Ellipse 1" />

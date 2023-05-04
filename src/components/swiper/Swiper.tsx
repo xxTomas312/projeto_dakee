@@ -11,7 +11,7 @@ interface SwiperProps {
   items: JSX.Element[];
 }
 
-const Swiper: React.FC<SwiperProps> = ({ items }) => {
+export const Swiper: React.FC<SwiperProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
@@ -53,11 +53,16 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
   };
 
   const handleGoToLast = () => {
-    setCurrentIndex(items.length - 1);
+    setCurrentIndex(items.length - 2);
     if (swiperRef.current) {
       swiperRef.current.scrollLeft = swiperRef.current.scrollWidth;
     }
   };
+
+  const isNextButtonVisible = currentIndex === 3 ? true : false;
+  const SkipButtonVisible = currentIndex === 3 || currentIndex === 4? false : true;
+  const BackButtonVisible = currentIndex === 0 ? false : true;
+
   return (
     <div className="swiper-container" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
       <div className='logo_container'>
@@ -71,13 +76,13 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
         ))}
       </div>
       <div className='button_container'>
-        <button className="swiper-prev" onClick={handlePrev}>
+        <button className="swiper-prev" onClick={handlePrev} style={{ display: BackButtonVisible ? 'block' : 'none' }}>
           <img src={Back_button} alt="Back button" />
         </button>
-        <button className="swiper-next" onClick={handleNext}>
-          Next
+        <button className="swiper-next" onClick={handleNext} style={{ display: isNextButtonVisible ? 'block' : 'none' }}>
+          Done
         </button>
-        <p className="go-to-last" onClick={handleGoToLast}>
+        <p className="go-to-last" onClick={handleGoToLast} style={{ display: SkipButtonVisible ? 'block' : 'none' }}>
           Skip the tutorial
         </p>
       </div>

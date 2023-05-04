@@ -1,3 +1,4 @@
+/*FOR BOTH SWIPERS*/
 .swiper-container {
   width: 100vw;
   height: 100vh;
@@ -15,12 +16,43 @@
   width: 100%;
 }
 
-.swiper-prev {
-  left: 0;
+/*CSS FOR THE TUTORIAL SWIPER*/
+
+@keyframes showButton {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.swiper-next {
-  right: 0;
+.swiper-prev {
+  display: flex;
+  position: absolute;
+  top: 3.5%;
+  left: 5%;
+  border: none;
+  width: 60px;
+
+  animation-name: showButton;
+  animation-duration: 1s;
+  animation-delay: 0; /* delay the animation for 1 second */
+  animation-fill-mode: forwards; /* keeps the button visible after the animation */
+}
+
+.swiper-next{
+  position: absolute;
+  bottom: 20%;
+  left: 21.8%;
+
+  animation-name: showButton;
+  animation-duration: 1s;
+  animation-delay: 0; /* delay the animation for 1 second */
+  animation-fill-mode: forwards; /* keeps the button visible after the animation */
+}
+
+.go-to-last{
+  animation-name: unshowButton;
+  animation-duration: 1s;
+  animation-delay: 0; /* delay the animation for 1 second */
+  animation-fill-mode: forwards; /* keeps the button visible after the animation */
 }
 
 .logo_container{
@@ -28,3 +60,8 @@
   top: 3%;
   left: 76%;
 }
+
+.swiper-next[style*="none"] {
+  display: flex;
+}
+

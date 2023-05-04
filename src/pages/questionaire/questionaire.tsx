@@ -1,30 +1,70 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Swiper from '../../components/swiper/Swiper'
-import Back_button from '../../images/back_b.png'
+import Swiper_Questionaire from '../../components/swiper/Swiper_q'
+import Female from '../../images/female.svg'
+import Male from '../../images/male.png'
+import Horse from '../../images/horse.png'
+import X from '../../images/x.png'
 import './questionaire.css'
 import '../../App.css'
 
 const items = [
     //PAGE 1
     <div className='questionaire_page_1' key="1">
-        <h1>Página 1</h1>
+        <h1>1/4</h1>
+        <h3>Age:</h3>
+        <div className="grid">
+          <div className="item">&lt;20</div>
+          <div className="item">22-39</div>
+          <div className="item">40-59</div>
+          <div className="item">60+</div>
+        </div>
     </div>,
     //PAGE 2
     <div className='questionaire_page_2' key="2">
-        <h1>Página 2</h1>
+        <h1>2/4</h1>
+        <h3>Gender:</h3>
+        <div className="grid">
+          <div className="item">
+            <img src={Female} alt="Female icon" />
+            Female
+          </div>
+          <div className="item">
+            <img src={Male} alt="Male icon" />
+            Male
+          </div>
+          <div className="item">
+            <img src={Horse} alt="Horse icon" />
+            Complex
+          </div>
+          <div className="item">
+            <img src={X} alt="X icon" />
+            Prefer not to say
+          </div>
+        </div> 
     </div>,
-    //PAGE 3
+    //PAGE 3 
     <div className='questionaire_page_3' key="3">
-        <h1>Página 3</h1>
+        <h1>3/4</h1>
+        <h3>I currently live in:</h3>
+        <input type="text" placeholder='City, Country'/>
+        <br />
+        <h3>I can give advices for:</h3>
+        <input type="text" placeholder='City, Country'/>
     </div>,
     //PAGE 4
     <div className='questionaire_page_4' key="4">
-        <h1>Página 4</h1>
+        <h1>4 /4</h1>
     </div>,
     //PAGE 5
     <div className='questionaire_page_5' key="5">
-        <h1>Página 5</h1>
+      <div className='subtitle_container'>
+        <h1>Perfect!</h1>
+        <h1>Let's start!</h1>
+      </div>
+      <div className='button_container'>
+        <Link to="/Home"><button>Ok</button></Link>
+      </div>
     </div>,
   ];
   
@@ -32,7 +72,7 @@ const items = [
     
     return (
       <div>
-        <Swiper items={items} />
+        <Swiper_Questionaire items={items} />
       </div>
     );
   };
