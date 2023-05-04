@@ -39,7 +39,8 @@
 }
 
 .questionaire_page_1>h3,
-.questionaire_page_2>h3{
+.questionaire_page_2>h3,
+.questionaire_page_3>h3{
   margin-bottom: 6%;
 }
 
@@ -98,6 +99,18 @@
   text-align: center;
 }
 
+/*QUESTIONAIRE PAGE 3*/
+.questionaire_page_3>.info_container{
+  width: 100%;
+  height: 54%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.questionaire_page_3>.info_container>input{
+  width: 100%;
+  margin-top: 3%;
+}
 
 /*QUESTIONAIRE PAGE 5*/
 .questionaire_page_5>.subtitle_container{
