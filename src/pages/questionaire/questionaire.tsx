@@ -8,6 +8,8 @@ import X from '../../images/x.png'
 import './questionaire.css'
 import '../../App.css'
 
+import MeuComponente from '../../components/add_place/add_place';
+
 const items = [
     //PAGE 1
     <div className='questionaire_page_1' key="1">
@@ -53,10 +55,14 @@ const items = [
           <h3>I can give advices for:</h3>
           <input type="text" placeholder='City, Country'/>
         </div>
+        <div>
+          <MeuComponente texto="Meu Componente" />
+        </div>
     </div>,
     //PAGE 4
     <div className='questionaire_page_4' key="4">
         <h1>4 /4</h1>
+        <h3>Travel experience preferences:</h3>
     </div>,
     //PAGE 5
     <div className='questionaire_page_5' key="5">
