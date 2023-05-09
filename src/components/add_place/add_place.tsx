@@ -7,10 +7,30 @@ interface MeuComponenteProps {
 }
 
 const MeuComponente: React.FC<MeuComponenteProps> = ({ texto }) => {
-  const [inputs, setInputs] = useState<string[]>([]);
+  const [inputs, setInputs] = useState<{id: number, value: string}[]>([]);
+  const [nextId, setNextId] = useState(0);
 
   const handleAddInput = () => {
-    setInputs([...inputs, '']);
+    if (inputs.length < 3) {
+      setInputs([...inputs, { id: nextId, value: '' }]);
+      setNextId(nextId + 1);
+    }
+  };
+
+  const handleDeleteInput = (id: number) => {
+    const newInputs = inputs.filter(input => input.id !== id);
+    setInputs(newInputs);
+  };
+
+  const handleInputChange = (id: number, value: string) => {
+    const newInputs = inputs.map(input => {
+      if (input.id === id) {
+        return { ...input, value };
+      } else {
+        return input;
+      }
+    });
+    setInputs(newInputs);
   };
 
   return (
@@ -19,9 +39,10 @@ const MeuComponente: React.FC<MeuComponenteProps> = ({ texto }) => {
         <button className='add_input_button' onClick={handleAddInput}>+ Add another place</button>
       </div>
       <div className='new_input_container'>
-        {inputs.map((value, index) => (
-          <div key={index} className="coluna">
-            <input />
+        {inputs.map((input) => (
+          <div key={input.id} className="coluna">
+            <input value={input.value} onChange={(event) => handleInputChange(input.id, event.target.value)} />
+            <button onClick={() => handleDeleteInput(input.id)}>X</button>
           </div>
         ))}
       </div>

@@ -8,7 +8,7 @@ interface SwiperProps {
   items: JSX.Element[];
 }
 
-export const Swiper: React.FC<SwiperProps> = ({ items }) => {
+export const Swiper_q: React.FC<SwiperProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -23,8 +23,9 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
     setCurrentIndex((currentIndex - 1 + items.length) % items.length);
   };
 
-  const NextButtonVisible = currentIndex === 4 ? false : true;
+  const NextButtonVisible = currentIndex === 4 || currentIndex === 3 ? false : true;
   const BackButtonVisible = currentIndex === 0 ? false : true;
+  const DoneButtonVisible = currentIndex === 3 ?  true : false;
 
   return (
     <div className="swiper-container">
@@ -33,21 +34,26 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
       </div>
       <div className="swiper-wrapper" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {items.map((item, index) => (
-          <div key={index} className="swiper-slide">
+          <div key={index} className={`swiper-slide slide-${index}`}>
             {item}
+          <div className='button_container'>
+            <button className="swiper-to-next" onClick={handleNext} style={{ display: NextButtonVisible ? 'block' : 'none' }}>
+              Next&gt;
+            </button>
+            <button className="swiper-done" onClick={handleNext} style={{ display: DoneButtonVisible ? 'block' : 'none' }}>
+              Done
+            </button>
           </div>
+        </div>
         ))}
       </div>
-      <div className='button_container'>
-        <button className="swiper-prev" onClick={handlePrev} style={{ display: BackButtonVisible ? 'block' : 'none' }}>
+      <div className="button_container">
+        <button className="swiper-to-prev" onClick={handlePrev} style={{ display: BackButtonVisible ? 'block' : 'none' }}>
           <img src={Back_button} alt="Back button" />
-        </button>
-        <button className="swiper-to-next" onClick={handleNext} style={{ display: NextButtonVisible ? 'block' : 'none' }}>
-          Next&gt;
         </button>
       </div>
     </div>
   );
 };
 
-export default Swiper;
+export default Swiper_q;

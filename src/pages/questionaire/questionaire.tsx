@@ -63,6 +63,48 @@ const items = [
     <div className='questionaire_page_4' key="4">
         <h1>4 /4</h1>
         <h3>Travel experience preferences:</h3>
+        <div className="grid">
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+          <div className="item">
+            <p>Party</p>
+            <img src="" alt="" />
+          </div>
+        </div>
     </div>,
     //PAGE 5
     <div className='questionaire_page_5' key="5">

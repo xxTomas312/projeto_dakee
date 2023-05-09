@@ -18,14 +18,14 @@
 .questionaire_page_1,
 .questionaire_page_2,
 .questionaire_page_3,
-.questionaire_page_4,
 .questionaire_page_5{
   padding-left: 14%;
   padding-right: 14%;
   padding-top: 47%;
-
   color: var(--color-white);
+  height: 97vh;
 }
+
 .questionaire_page_1>h1,
 .questionaire_page_2>h1,
 .questionaire_page_3>h1,
@@ -97,12 +97,12 @@
   font-size: 16px;
   line-height: 19px;
   text-align: center;
+  margin-bottom: 33%;
 }
 
 /*QUESTIONAIRE PAGE 3*/
 .questionaire_page_3>.info_container{
   width: 100%;
-  height: 54%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -110,6 +110,18 @@
 .questionaire_page_3>.info_container>input{
   width: 100%;
   margin-top: 3%;
+}
+
+/*QUESTIONAIRE PAGE 4*/
+.questionaire_page_4{
+  padding-left: 14%;
+  padding-right: 14%;
+  padding-top: 47%;
+  color: var(--color-white);
+  height: 111vh;
+}
+.questionaire_page_4>.grid{
+  padding-bottom: 100%;
 }
 
 /*QUESTIONAIRE PAGE 5*/
