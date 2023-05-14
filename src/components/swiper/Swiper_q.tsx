@@ -29,12 +29,17 @@ export const Swiper_q: React.FC<SwiperProps> = ({ items }) => {
 
   return (
     <div className="swiper-container">
-      <div className='logo_container'>
-        <img src={LogoSmall} alt="" />
-      </div>
       <div className="swiper-wrapper" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {items.map((item, index) => (
           <div key={index} className={`swiper-slide slide-${index}`}>
+            <div className='questionaire_nav'>
+              <button className="swiper-to-prev" onClick={handlePrev} style={{ display: BackButtonVisible ? 'block' : 'none' }}>
+                <img src={Back_button} alt="Back button" />
+              </button>
+              <div className="questionaire_img_container">
+                <img src={LogoSmall} alt="" />
+              </div>
+            </div>
             {item}
           <div className='button_container'>
             <button className="swiper-to-next" onClick={handleNext} style={{ display: NextButtonVisible ? 'block' : 'none' }}>
@@ -46,11 +51,6 @@ export const Swiper_q: React.FC<SwiperProps> = ({ items }) => {
           </div>
         </div>
         ))}
-      </div>
-      <div className="button_container">
-        <button className="swiper-to-prev" onClick={handlePrev} style={{ display: BackButtonVisible ? 'block' : 'none' }}>
-          <img src={Back_button} alt="Back button" />
-        </button>
       </div>
     </div>
   );

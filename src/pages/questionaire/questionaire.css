@@ -11,17 +11,20 @@
     --text-color: #FFBABA;
 }
 
-/*Prev and Next Buttons do Swiper*/
 
-
-
-.questionaire_page_1,
 .questionaire_page_2,
 .questionaire_page_3,
 .questionaire_page_5{
   padding-left: 14%;
   padding-right: 14%;
-  padding-top: 47%;
+  padding-top: 24%;
+  color: var(--color-white);
+  height: 97vh;
+}
+.questionaire_page_1{
+  padding-left: 14%;
+  padding-right: 14%;
+  padding-top: 30%;
   color: var(--color-white);
   height: 97vh;
 }
@@ -56,7 +59,7 @@
 }
 
 
-
+/*Grid css build*/
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -70,7 +73,6 @@
   text-align: center;
   width: 100%;
 }
-
 .item {
   background-color: #ccc;
   padding: 10px;
@@ -89,6 +91,9 @@
   margin-bottom: 12%;
 }
 
+
+
+
 /*QUESTIONAIRE PAGE 2*/
 .questionaire_page_2>.grid{
   font-family: 'Inter';
@@ -99,6 +104,9 @@
   text-align: center;
   margin-bottom: 33%;
 }
+
+
+
 
 /*QUESTIONAIRE PAGE 3*/
 .questionaire_page_3>.info_container{
@@ -112,17 +120,34 @@
   margin-top: 3%;
 }
 
+
+
+
 /*QUESTIONAIRE PAGE 4*/
 .questionaire_page_4{
   padding-left: 14%;
   padding-right: 14%;
-  padding-top: 47%;
+  padding-top: 30%;
   color: var(--color-white);
   height: 111vh;
 }
+.questionaire_page_4>.grid>.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.questionaire_page_4>.grid>.item>img{
+  margin: 0;
+  margin-top: 10%;
+}
 .questionaire_page_4>.grid{
   padding-bottom: 100%;
+  
 }
+
+
+
 
 /*QUESTIONAIRE PAGE 5*/
 .questionaire_page_5>.subtitle_container{

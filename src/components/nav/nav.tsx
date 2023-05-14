@@ -6,7 +6,9 @@ function Nav_bar_component() {
     
     return(
         <>
-        <h1>Nav component</h1>
+        <div className='nav_container'>
+            
+        </div>
         </>
     )
 }

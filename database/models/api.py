@@ -7,7 +7,6 @@ class Account_API_Model(BaseModel):
     name : str
     email : str
     password : str
-    whatami: str 
     age: str
     gender: str
     i_currently_live_in: str

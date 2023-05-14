@@ -14,7 +14,6 @@ def create_account(new_account: Account_API_Model, response:Response):
     - Name
     - E-mail
     - Password
-    - What_Am_I
     - Age
     - Gender
     - I Currently Live In

@@ -7,6 +7,17 @@ import Horse from '../../images/horse.png'
 import X from '../../images/x.png'
 import './questionaire.css'
 import '../../App.css'
+import Party from '../../images/party.png'
+import Sightseeing from '../../images/sightseeing.png'
+import Art from '../../images/art.png'
+import History from '../../images/history.png'
+import Music from '../../images/music.png'
+import Sports from '../../images/sports.png'
+import Adventure from '../../images/adventure.png'
+import Spiritual from '../../images/spiritual.png'
+import Nature from '../../images/nature.png'
+import Food from '../../images/food.png'
+
 
 import MeuComponente from '../../components/add_place/add_place';
 
@@ -65,44 +76,44 @@ const items = [
         <h3>Travel experience preferences:</h3>
         <div className="grid">
           <div className="item">
+            <img src={Party} alt="" />
             <p>Party</p>
-            <img src="" alt="" />
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={Sightseeing} alt="" />
+            <p>Sightseeing</p>
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={Art} alt="" />
+            <p>Art</p>
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={History} alt="" />
+            <p>History</p>
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={Music} alt="" />
+            <p>Music</p>
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={Sports} alt="" />
+            <p>Sports</p>
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={Adventure} alt="" />
+            <p>Adventure</p>
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={Spiritual} alt="" />
+            <p>Spiritual</p>
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={Nature} alt="" />
+            <p>Nature</p>
           </div>
           <div className="item">
-            <p>Party</p>
-            <img src="" alt="" />
+            <img src={Food} alt="" />
+            <p>Food</p>
           </div>
         </div>
     </div>,

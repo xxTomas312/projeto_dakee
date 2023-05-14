@@ -26,7 +26,6 @@ class Account_database_Model(BaseDatabaseModel):
     name: Mapped[str] = mapped_column(String(50))
     email: Mapped[str] = mapped_column(String(50))
     password: Mapped[str] = mapped_column(String(100))
-    whatami: Mapped[str] = mapped_column('account.whatami', ENUM("Traveller", "Local"))
     age: Mapped[str] = mapped_column('account.age', ENUM("<20", "22-39", "40-59", "60+"))
     gender: Mapped[str] = mapped_column('account.gender', ENUM("Female", "Male", "Complex", "Prefer not to say"))  
     i_currently_live_in: Mapped[str] = mapped_column(String(100))
