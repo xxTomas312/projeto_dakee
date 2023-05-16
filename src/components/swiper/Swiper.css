@@ -52,8 +52,11 @@
 
 .logo_container{
   position: absolute;
-  top: 3%;
-  left: 76%;
+  top: 3.5%;
+  left: 75%;
+}
+.logo_container>img{
+  width: 116%;
 }
 
 .swiper-next[style*="none"] {
@@ -107,10 +110,10 @@
 .swiper-slide.slide-0 img{
   display: flex;
   position: absolute;
-  top: 1%;
-  right: 4%;
+  top: 1.4%;
+  right: 5%;
   margin-top: 4%;
-  width: 23%;
+  width: 20%;
 }
 
 .questionaire_img_container>img{
@@ -120,6 +123,6 @@
 .swiper-slide.slide-2 .questionaire_img_container,
 .swiper-slide.slide-3 .questionaire_img_container,
 .swiper-slide.slide-4 .questionaire_img_container{
-  margin-top: 7%;
+  margin-top: 8%;
   margin-right: 8%
 }
