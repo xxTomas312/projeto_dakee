@@ -33,13 +33,14 @@
 
   
 .new_input_container{
-    height: auto;
-    margin-top: 4%;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  height: auto;
+  margin-top: 4%;
+  width: 113%;
+  display: flex;
+  margin-left: 3%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
   .coluna { 

@@ -72,7 +72,7 @@ const items = [
     </div>,
     //PAGE 4
     <div className='questionaire_page_4' key="4">
-        <h1>4 /4</h1>
+        <h1>4/4</h1>
         <h3>Travel experience preferences:</h3>
         <div className="grid">
           <div className="item">

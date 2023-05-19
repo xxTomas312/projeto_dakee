@@ -12,18 +12,18 @@
   }
 
 .signUp_page{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100vw;
+  height: 106vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4.5%;
 }
 
 .signUp_page>.subtitle_container{
   height: 16.5%;
-  width: 89%;
-  margin-top: 9.7%;
-  margin-left: 4.7%;
+  padding-top: 10.4%;
+  padding-right: 25%;
 }
 
 .signUp_page>.info_container{

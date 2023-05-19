@@ -13,18 +13,17 @@
 
 
 .questionaire_page_2,
-.questionaire_page_3,
 .questionaire_page_5{
   padding-left: 14%;
   padding-right: 14%;
-  padding-top: 24%;
+  padding-top: 18%;
   color: var(--color-white);
   height: 97vh;
 }
 .questionaire_page_1{
   padding-left: 14%;
   padding-right: 14%;
-  padding-top: 30%;
+  padding-top: 24.2%;
   color: var(--color-white);
   height: 97vh;
 }
@@ -109,6 +108,14 @@
 
 
 /*QUESTIONAIRE PAGE 3*/
+.questionaire_page_3{
+  padding-left: 14%;
+  padding-right: 14%;
+  padding-top: 18%;
+  color: var(--color-white);
+  height: 110vh;
+  overflow-y: scroll;
+}
 .questionaire_page_3>.info_container{
   width: 100%;
   display: flex;
@@ -127,7 +134,7 @@
 .questionaire_page_4{
   padding-left: 14%;
   padding-right: 14%;
-  padding-top: 30%;
+  padding-top: 24%;
   color: var(--color-white);
   height: 111vh;
 }

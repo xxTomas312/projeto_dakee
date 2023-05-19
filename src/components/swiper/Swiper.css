@@ -34,8 +34,8 @@
 
 .swiper-next{
   position: absolute;
-  bottom: 20%;
-  left: 21.8%;
+  bottom: 17%;
+  left: 22.8%;
 
   animation-name: showButton;
   animation-duration: 1s;
@@ -95,7 +95,7 @@
 .swiper-slide.slide-1 .swiper-to-next,
 .swiper-slide.slide-2 .swiper-to-next{
   position: absolute;
-  top: 63%;
+  top: 67%;
 }
 .swiper-slide.slide-3{
   height: 100vh;

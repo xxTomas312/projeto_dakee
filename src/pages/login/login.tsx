@@ -14,7 +14,6 @@ function Login_page() {
   
   return(
       <>
-      <body>
         <section className='login_or_signUp_page'>
           <div className='slogan_container'>
             <img src={Logo_img} alt="Logo slogan" />
@@ -31,35 +30,35 @@ function Login_page() {
           </div>
         </section>
 
+
         {aberto ? (
-          <section className="login_page">
-            <div className="go-back" onClick={() => setAberto(false)}>
-                <img src={Back_button} alt="Back button" />
-            </div>
-            <div className='slogan_container'>
-              <img src={Logo_img} alt="Logo slogan" />
-            </div>
-            <div className='subtitle_container'>
-              <h2>Log in </h2>
-            </div>
-            <div className='info_container'>
-              <input className='info_input' type="text" placeholder='E-mail'/>
-              <input className='info_input' type="password" placeholder='Password'/>
-            </div>
-            <div className='button_container'>
-              <button>Login</button>
-            </div>
-            <div className='social_info'>
-              <p>or login using:</p>
-              <div className='social_media'>
-                <img className='facebook_icon'src={facebook} alt="Facebook" />
-                <img className='gmail_icon' src={Gmail} alt="Gmail" />
-                <img className='apple_icon' src={Apple} alt="Apple" />
+            <section className="login_page">
+              <div className="go-back" onClick={() => setAberto(false)}>
+                  <img src={Back_button} alt="Back button" />
               </div>
-            </div>
-          </section>
+              <div className='slogan_container'>
+                <img src={Logo_img} alt="Logo slogan" />
+              </div>
+              <div className='subtitle_container'>
+                <h2>Log in </h2>
+              </div>
+              <div className='info_container'>
+                <input className='info_input' type="text" placeholder='E-mail'/>
+                <input className='info_input' type="password" placeholder='Password'/>
+              </div>
+              <div className='button_container'>
+                <button>Login</button>
+              </div>
+              <div className='social_info'>
+                <p>or login using:</p>
+                <div className='social_media'>
+                  <img className='facebook_icon'src={facebook} alt="Facebook" />
+                  <img className='gmail_icon' src={Gmail} alt="Gmail" />
+                  <img className='apple_icon' src={Apple} alt="Apple" />
+                </div>
+              </div>
+            </section>
       ) : null}
-      </body>
       </>
   )
 }
