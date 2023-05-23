@@ -44,7 +44,7 @@ import music_icon from '../../images/music_f.png'
               </div>
               <div className='home_button_container'>
                   <button className="home_filter_btt" onClick={() => setAberto(true)} >
-                      <img src={Filter_icon} alt="Filter icon" />
+                      <img src={filter_icon} alt="Filter icon" />
                       <p>Filters</p>
                   </button>
                   <button className='search_btt'>Search&gt;</button> 
@@ -62,7 +62,7 @@ import music_icon from '../../images/music_f.png'
                 </button>
                 <div className='filter_main_container'>
                 <div className='filters_subtitle_container'>
-                  <img src={filter_icon} alt="Filters Icon" />
+                  <img src={Filter_icon} alt="Filters Icon" />
                   <h3>Filters</h3>
                 </div>
                 <div className='gender_filter'>
@@ -74,7 +74,7 @@ import music_icon from '../../images/music_f.png'
                 </div>
                 <div className='age_filter'>
                   <p className='filter_subtitle'>Age</p>
-                  <RangeSlider min={0} max={100} step={1} value={value} onChange={handleSliderChange}/>
+                  <RangeSlider value={value} onChange={handleSliderChange}/>
                   <div className='slider_range_container'>
                     <p>20</p>
                     <p>60+</p>

@@ -118,16 +118,13 @@
   left: 0;
   animation-name: slideIn;
 }
-
-.filter_subtitle{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 16px;
-  /* identical to box height */
-  color: #F0694F;
+/*BACK BUTTON*/
+.filters_page>.back-button{
+  width: 20%;
+  margin-top: 11.7%;
 }
+
+/*SUBTITLE*/
 
 .filters_page>p{
   font-family: 'Inter';
@@ -138,7 +135,6 @@
   /* identical to box height */
   color: #F0694F;
 }
-
 .filters_subtitle_container{
   display: flex;
   width: 30%;
@@ -151,18 +147,22 @@
   line-height: 19px;
   color: #F0694F;
 }
+.filter_subtitle{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height */
+  color: #F0694F;
+  margin-top: 30px;
+}
 .filters_subtitle_container>img{
   width: 18px;
   height: 18px;
   margin-right: 7px;
   margin-top: 2px;
 }
-
-.filters_page>.back-button{
-  width: 20%;
-  margin-top: 5%;
-}
-
 .filters_page>.filter_main_container{
   height: 40%;
   padding: 15%;
@@ -184,7 +184,7 @@
 
 .advices_filter{
   display: flex;
-  width: 30%;
+  width: 57%;
   justify-content: space-between;
 }
 .advice_btt_container{
@@ -214,7 +214,20 @@
 
 
 
+.slider_range_container{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #F0694F;
+  }
 
 
 
