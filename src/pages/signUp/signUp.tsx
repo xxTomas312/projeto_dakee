@@ -10,8 +10,6 @@ import '../../App.css'
 
 
 function Sign_up() {
-    const [aberto, setAberto] = useState(false);
-    
     return(
         <>
         <section className="signUp_page">

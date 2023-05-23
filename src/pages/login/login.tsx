@@ -30,7 +30,6 @@ function Login_page() {
           </div>
         </section>
 
-
         {aberto ? (
             <section className="login_page">
               <div className="go-back" onClick={() => setAberto(false)}>

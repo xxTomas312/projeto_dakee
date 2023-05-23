@@ -1,102 +1,111 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Filter_icon from '../../images/filters_icon.png'
-import logoSmall from '../../images/logoSmall.png'
+import Nav from '../../components/nav/nav'
+import Filter_icon from '../../images/filter.png'
 import Luoa_icon from '../../images/lupa.png'
 import './home.css'
 import '../../App.css'
 import SearchBar from '../../components/search_bar/search_bar'
+import RangeSlider from '../../components/range_slider/range_slider'
+import backButton from '../../images/back_button_f.png'
+import filter_icon from '../../images/filters_icon.png'
+import Stars from '../../images/stars.png'
+import art_icon from '../../images/art_f.png'
+import food_icon from '../../images/food_f.png'
+import music_icon from '../../images/music_f.png'
 
-const Home_page: React.FC = () => {
-  enum CurrentPage {
-    Buttons = 'Buttons',
-    A = 'A',
-    B = 'B',
-  }
+
+
+
 
   const handleSearch = (searchTerm: string) => {
     console.log('Search term:', searchTerm);
     // Perform your search logic here
   };
 
-  const [currentPage, setCurrentPage] = useState<CurrentPage>(CurrentPage.Buttons);
 
-  const handleButtonClick = (page: CurrentPage) => {
-    setCurrentPage(page);
-  };
+  function Home_page() {
+    const [aberto, setAberto] = useState(false);
+    const [value, setValue] = useState(50);
 
-  const handleBackButtonClick = () => {
-    setCurrentPage(CurrentPage.Buttons);
-  };
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case CurrentPage.Buttons:
-        return (
-          <section className='home_page'>
-            <div className='menu_button_container'>
-                <img src={logoSmall} alt="" onClick={() => handleButtonClick(CurrentPage.A)} />
-            </div>
-            <div className='subtitle_container'>
-                <h1>Find the Local!</h1>
-            </div>
-            <div className='search_container'>
-              <SearchBar onSearch={handleSearch} />
-            </div>
-            <div className='home_button_container'>
-                <button className={`home_filter_btt ${currentPage !== CurrentPage.Buttons ? 'page-slide-leave' : ''}`}onClick={() => handleButtonClick(CurrentPage.B)} >
-                    <img src={Filter_icon} alt="Filter icon" />
-                    <p>Filters</p>
+    const handleSliderChange = (newValue: number) => {
+      setValue(newValue);
+    };
+    
+    return(
+        <>
+         <section className='home_page'>
+              <Nav></Nav>
+              <div className='subtitle_container'>
+                  <h1>Find the Local!</h1>
+              </div>
+              <div className='search_container'>
+                <SearchBar onSearch={handleSearch} />
+              </div>
+              <div className='home_button_container'>
+                  <button className="home_filter_btt" onClick={() => setAberto(true)} >
+                      <img src={Filter_icon} alt="Filter icon" />
+                      <p>Filters</p>
+                  </button>
+                  <button className='search_btt'>Search&gt;</button> 
+              </div>
+              <div className='image_container'>
+                  <img src={Luoa_icon} alt="" />
+                  <p>Choose a city <br/>to search for the Locals!</p>
+              </div>
+          </section>
+  
+          {aberto ? (
+              <div className="filters_page">
+                <button className="back-button" onClick={() => setAberto(false)}>
+                  <img src={backButton} alt="Back Button" />
                 </button>
-                <button className='search_btt'>Search&gt;</button> 
+                <div className='filter_main_container'>
+                <div className='filters_subtitle_container'>
+                  <img src={filter_icon} alt="Filters Icon" />
+                  <h3>Filters</h3>
+                </div>
+                <div className='gender_filter'>
+                  <p className='filter_subtitle'>Gender</p>
+                  <div className='filter_btt_container'>
+                    <div className='gender_btt'>Male</div>
+                    <div className='gender_btt'>Female</div>
+                  </div>
+                </div>
+                <div className='age_filter'>
+                  <p className='filter_subtitle'>Age</p>
+                  <RangeSlider min={0} max={100} step={1} value={value} onChange={handleSliderChange}/>
+                  <div className='slider_range_container'>
+                    <p>20</p>
+                    <p>60+</p>
+                  </div>
+                </div>
+                <p className='filter_subtitle'>Advices in</p>
+                <div className='advices_filter'>
+                  <div className='advice_btt_container'>
+                    <img src={art_icon} alt="Art icon"/>
+                    <p>art</p>
+                  </div>
+                  <div className='advice_btt_container'>
+                    <img src={food_icon} alt="Food icon"/>
+                    <p>food</p>
+                  </div>
+                  <div className='advice_btt_container'>
+                    <img src={music_icon} alt="Music icon"/>
+                    <p>music</p>
+                  </div>
+                </div>
+                <div className='rating_container'>
+                  <p className='filter_subtitle'>Minimal rating</p>
+                  <img src={Stars} alt="" />
+                </div>
+              </div>
             </div>
-            <div className='image_container'>
-                <img src={Luoa_icon} alt="" />
-                <p>Choose a city <br/>to search for the Locals!</p>
-            </div>
-        </section>
-        );
-      case CurrentPage.A:
-        return (
-          <div className={`menu_page ${currentPage ? 'page-slide-enter' : ''}`}>
-            <h2>Menu</h2>
-            <button className="back-button" onClick={handleBackButtonClick}>
-              <img src="" alt="" />
-            </button>
-          </div>
-        );
-      case CurrentPage.B:
-        return (
-          <div className={`filters_page ${currentPage ? 'page-slide-enter' : ''}`}>
-            <h1>Página B</h1>
-            <button className="back-button" onClick={handleBackButtonClick}>
-              <img src="" alt="" />
-            </button>
-          </div>
-        );
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <div className={`slide_page ${currentPage ? 'page-slide-enter' : ''}`}>
-      {renderPage()}
-    </div>
-  );
-};
-
-export default Home_page;
-
-
-
-
-
-
-
-
-
-
-
+        ) : null}
+        </>
+    )
+  }
+  
+  export default Home_page;
 
         

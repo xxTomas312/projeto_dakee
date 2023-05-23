@@ -55,7 +55,11 @@
     top: 0.9%;
     left: 0%;
     padding: 3%;
+    border: none;
     background: var(--background-color);
+}
+.login_page>.go-back{
+    margin-right: -1%;
 }
 .login_page>.slogan_container{
     padding-left: 0.3%;
@@ -67,7 +71,7 @@
 .login_page>.subtitle_container{
     height: 13.5%;
     padding-top: 11.5%;
-    padding-right: 49%;
+    padding-right: 50%;
   }
 
 .login_page>.info_container{

@@ -19,6 +19,9 @@
   align-items: center;
   margin-top: 4.5%;
 }
+.signUp_page>.go-back{
+  margin-left: 20px;
+}
 
 .signUp_page>.subtitle_container{
   height: 16.5%;
