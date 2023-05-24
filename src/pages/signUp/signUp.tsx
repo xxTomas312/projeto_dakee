@@ -5,8 +5,11 @@ import facebook from '../../images/face_icon.png'
 import Gmail from '../../images/gmail_icon.png'
 import Apple from '../../images/apple_icon.png'
 import Back_button from '../../images/back_b.png'
+import Google_Login from '../../components/google_login/google_login'
 import './signUp.css'
 import '../../App.css'
+
+import { GoogleLogin } from 'react-google-login';
 
 
 function Sign_up() {
@@ -39,6 +42,7 @@ function Sign_up() {
                     <img className='gmail_icon' src={Gmail} alt="Gmail" />
                     <img className='apple_icon' src={Apple} alt="Apple" />
                 </div>
+                
             </div>
         </section>
         </>
