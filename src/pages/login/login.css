@@ -7,41 +7,28 @@
     border: none;
     background: var(--background-color);
 }
-.login_page>.go-back{
-   
-}
+
 .login_page>.slogan_container{
-    padding-top: 0.8px;
-}
-.login_page>.slogan_container>img{
-    padding-top: 26.6%;
+    margin-top: -67px;
 }
 
 .login_page>.subtitle_container{
-    height: 13.5%;
-    padding-top: 11.5%;
-    padding-right: 50%;
-  }
+    height: 16.5%;
+    padding-top: 33px;
+    padding-right: 192px;
+}
 
 .login_page>.info_container{
     width: 375px;
-    height: 820px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 8%;
+    padding-bottom: 40px;
+    padding-top: 10px;
 
 }
 
-.login_page>.button_container{
-    padding-bottom: 10%;
-}
-.login_page>.button_container>button{
-    cursor: pointer;
-}
 
-.login_page>.social_info>.social_media{
-    width: 100%;
-    margin-bottom: 7%;
-}
+
+
 

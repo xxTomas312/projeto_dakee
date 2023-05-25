@@ -12,23 +12,35 @@
   --color-white: #fff;
   --color-secondary: #f0694f;
   --text-color: #FFBABA;
-
-  --chat-bubble-theirs: #e9135c;
-  --chat-bubble-theirs-border: #f0694f;
-  --chat-bubble-yours: #e9135c;
-
-  --notification-color: #e80f5d;
-
-  --default-padding: 50px;
-  --default-title-size: xxx-large;
-  --default-subtitle-size: 26px;
+  --subtitle-size: 26.5px;
 }
 
 
-
-html{
+.body_frame{
   width: 375px;
+  height: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
 }
+
+.slogan_container>img{
+  width: 219px;
+  height: 100px;
+  margin-top: 110px;
+}
+
+.subtitle_container{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: var(--subtitle-size);
+  line-height: 44px;
+  color: var(--color-white);
+  padding-top: 33px;
+}
+
 .title_text{
   color: var(--color-white);
   font-size:var(--default-title-size);
@@ -49,16 +61,6 @@ html{
   color: #FFBABA;
 }
 
-.subtitle_container{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: var(--default-subtitle-size);
-  line-height: 44px;
-
-  color: var(--color-white);
-  padding-top: 11%;
-}
 
 /*INPUT'S CSS*/
 input{
@@ -87,7 +89,6 @@ input{
 .info_container>input:focus{
   outline: none;
 }
-
 input::placeholder{
   font-family: 'Inter';
   font-style: normal;
@@ -108,14 +109,18 @@ input:focus{
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-
   color: var(--text-color);
 }
 
-/*SOCIAL MEDIA ICONS*/
 
+
+/*SOCIAL MEDIA ICONS*/
 .social_media{
-  width: 100%;
+  width: 150px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 .social_info{
   width: 100%;
@@ -134,61 +139,51 @@ input:focus{
 .social_info>p{
   opacity: 0.8;
 }
-
-.social_info>.social_media>.gmail_icon{
-  width: 20%;
-}
-.social_info>.social_media>.apple_icon{
-  width: 16%;
-  padding-bottom: 1%;
-}
-.social_info>.social_media>.facebook_icon{
-  width: 18%;
-}
-.gmail_icon,
-.apple_icon,
-.facebook_icon{
-    cursor: pointer;
+.social_info>.social_media>img{
+  width: 34px;
+  height: 36px;
 }
 
-
-
-/*Slogan Container Height*/
-.slogan_container>img{
-  padding-top: 22.8%;
-}
 
 /*BUTTON CSS*/
 /*Normal button*/
+.type_one,
 button,
 .swiper-prev,
 .swiper-next
 {
-  width: 230px;
-  height: 68px;
+  width: 240px;
+  height: 72px;
   background: transparent;
   border-radius: 40px;
   border: 2px solid var(--color-white);
   color: var(--color-white);
+  margin-bottom: 20px;
   
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17.5px;
   line-height: 19px;
   text-align: center;
   cursor: pointer;
 }
 
 /*Back button*/
+.go_back_container{
+  margin-top: 42px;
+  padding-right: 280px;
+}
+
 .go-back{
   background: transparent;
   border: none;
   cursor: pointer;
-
-  width: 365px;
+  width: 30px;
   display: flex;
-  padding-left: 2%;
   background: transparent;
   border: none;
+}
+.go-back>img{
+  width: 12px;
 }

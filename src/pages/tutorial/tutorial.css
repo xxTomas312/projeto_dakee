@@ -16,16 +16,26 @@
 .tutorial_page_3,
 .tutorial_page_4,
 .tutorial_page_5{
-  padding-left: 11%;
+  padding-left: 38px;
   padding-right: 11%;
   padding-top: 15%;
-  height: 78vh;
+  width: 375px;
+  height: 820px;
   overflow: scroll;
+  background: var(--background-color);
+}
+
+.tutorial_page_1>.subtitle_container,
+.tutorial_page_2>.subtitle_container,
+.tutorial_page_3>.subtitle_container,
+.tutorial_page_4>.subtitle_container,
+.tutorial_page_5>.subtitle_container{
+  font-size: 25.5px;
 }
 
 /*PAGES IMAGES*/
 .img_container{
-  width: 100%;
+  width: 289px;
   display: flex;
   justify-content: center;
   margin-bottom: 22%;
@@ -41,6 +51,7 @@
 
 .text_container{
   height: 40%;
+  width: 309px;
   text-align: start;
 }
 
@@ -54,26 +65,26 @@
   position: absolute;
 }
 .tutorial_page_1>.ellipse_container{
-  left: 41%;
-  bottom: 0.2%;
+  left: 39.3%;
+  bottom: 200px;
 }
 /* Page 2 */
 .tutorial_page_2>.ellipse_container{
-  left: 141.1%;
-  bottom: 0.2%;
+  left: 139.3%;
+  bottom: 200px;
 }
 /* Page 3 */
 .tutorial_page_3>.ellipse_container{
   width: 100%;
   left: 200%;
-  bottom: 0.2%;
+  bottom: 200px;
 }
 
 /* Page 4 */
 .tutorial_page_4>.ellipse_container{
   width: 100%;
   left: 300%;
-  bottom: -1.5%;
+  bottom: 200px;
 }
 
 
@@ -83,9 +94,6 @@
 /*TUTORIAL PAGE 2*/
 .tutorial_page_2>.subtitle_container{
   margin-top: 14%;
-}
-.tutorial_page_2>.text_container{
-  height: 39.5%;
 }
 
 /*TUTORIAL PAGE 3*/

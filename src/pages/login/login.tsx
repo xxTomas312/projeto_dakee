@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import '../../App.css'
-import Logo_img from '../../images/logo.png'
+import Logo_img from '../../images/logo.svg'
 import facebook from '../../images/face_icon.png'
 import Gmail from '../../images/gmail_icon.png'
 import Apple from '../../images/apple_icon.png'
 import Back_button from '../../images/back_b.png'
 import { Link } from 'react-router-dom';
 import './login.css'
+import '../../App.css'
 
 
 function login_page() {
@@ -14,9 +15,11 @@ function login_page() {
     return(
         <>
         <section className="login_page">
-            <div className="go-back">
-                <Link to="/Login_or_signUp"><img src={Back_button} alt="Back button" /></Link>
-            </div>
+            <Link className='go_back_container' to="/Login_or_signUp">
+                <div className="go-back">
+                    <img src={Back_button} alt="" />
+                </div>
+            </Link>
             <div className='slogan_container'>
                 <img src={Logo_img} alt="Logo slogan" />
             </div>

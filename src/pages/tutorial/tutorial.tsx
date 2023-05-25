@@ -23,7 +23,7 @@ const items = [
       <img src={IMG_1} alt="People Img" />
     </div>
     <div className='text_container'>
-      <p>Dakee was created to give the real, 
+      <p>Dakee was created to give the real, <br />
         non-touristic experience in a visited city.</p>
         <p>Based on your interests, we connect 
         Travellers and Locals to exchange ideas

@@ -19,13 +19,15 @@
   padding-top: 18%;
   color: var(--color-white);
   height: 97vh;
+  background: var(--background-color);
 }
 .questionaire_page_1{
   padding-left: 14%;
   padding-right: 14%;
   padding-top: 24.2%;
   color: var(--color-white);
-  height: 97vh;
+  height: 820px;
+  background: var(--background-color);
 }
 
 .questionaire_page_1>h1,

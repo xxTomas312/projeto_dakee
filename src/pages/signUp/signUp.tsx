@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo_img from '../../images/logo.png'
+import Logo_img from '../../images/logo.svg'
 import facebook from '../../images/face_icon.png'
 import Gmail from '../../images/gmail_icon.png'
 import Apple from '../../images/apple_icon.png'
@@ -15,11 +15,11 @@ function Sign_up() {
     return(
         <>
         <section className="signUp_page">
-        <Link className='logo_page' to="/Login_or_signUp"></Link>
+            <Link className='go_back_container' to="/Login_or_signUp">
                 <div className="go-back">
                     <img src={Back_button} alt="" />
                 </div>
-
+            </Link>
             <div className='slogan_container'>
             <img src={Logo_img} alt="Logo slogan" />
             </div>

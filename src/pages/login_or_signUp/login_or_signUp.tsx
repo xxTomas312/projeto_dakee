@@ -1,7 +1,7 @@
 import React from 'react';
 import './login_or_signUp.css'
 import '../../App.css'
-import Logo_img from '../../images/logo.png'
+import Logo_img from '../../images/logo.svg'
 import { Link } from 'react-router-dom';
 
 
@@ -20,8 +20,8 @@ function Login_or_signUp() {
           </div>
           </div>  
           <div className='button_container'>
-            <Link className='sign_in_b' to="/SignUp"><button>Sign up</button></Link>
-            <Link className='sign_in_b' to="/Login"><button>Log in</button></Link>
+            <Link className='sign_in_b' to="/SignUp"><button className='type_one'>Sign up</button></Link>
+            <Link className='sign_in_b' to="/Login"><button className='type_one'>Log in</button></Link>
           </div>
         </section>
       </>
