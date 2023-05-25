@@ -39,7 +39,7 @@
     color: #F0694F;
 }
 
-.img_container{
+.My_profile_body>.img_container{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -85,3 +85,25 @@
 
     color: #F0694F;
 }
+
+
+/*Rewards Page*/
+.rewards_page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 375px;
+    height: 1269px;
+    overflow-y: scroll;
+    background: blue;
+}
+
+.rewards_page>.subtitle_container{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px; 
+    color: #F0694F;
+}
+

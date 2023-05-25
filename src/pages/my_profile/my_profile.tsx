@@ -31,13 +31,54 @@ function My_profile() {
                     <img src={Star} alt="Star icon" />
                 </div>
                 <div className='buttons_container'>
-                    <button>Get rewards</button>
+                    <button onClick={() => setAberto(true)}>Get rewards</button>
                     <button>Saved rewards</button>
                     <button>Edit profile</button>
                     <button>Log out</button>
                 </div>
             </div>
         </section>
+
+
+        {aberto ? (
+            <section className="rewards_page">
+            <Nav></Nav>
+             <div className='subtitle_container'>
+                <h2>Rewards</h2>
+                <div className='rating_container'>
+                    <p></p>
+                    <img src="" alt="" />
+                </div>
+                <div className='grid_container'>
+                    <div className="grid-item">
+                        <div className='rating_reward'>
+                            <p>30</p>
+                            <img src="" alt="star" />
+                        </div>
+                        <div className='brand'>
+                            <h4>Vans</h4>
+                        </div>
+                        <div className='advertising_container'>
+                            <h2>-25%</h2>
+                        </div>
+                        <div className='img_container'>
+                            <img src="" alt="Vans logo" />
+                        </div>
+                        <div className='button_more'>
+                            <button className='more_button'>More&gt;</button>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+
+                    </div>
+                    <div className="grid-item">
+
+                    </div> 
+                </div>
+             </div>
+            </section>
+      ) : null}
+
         </>
     )
 }

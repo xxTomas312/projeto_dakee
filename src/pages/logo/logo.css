@@ -1,11 +1,12 @@
 .logo_page{
-    width: 100vw;
-    height: 100vh;
+    width: 375px;
+    height: 820px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .text{
     width: 40%;
     position:absolute;

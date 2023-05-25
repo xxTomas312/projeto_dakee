@@ -24,18 +24,11 @@
   --default-subtitle-size: 26px;
 }
 
-body,
-.body_frame{
-  display: flex;
-  background: var(--background-color);
-  background-repeat: no-repeat;
-  margin: 0;
 
-  width: 100%;
-  padding: 0;
+
+html{
+  width: 375px;
 }
-
-
 .title_text{
   color: var(--color-white);
   font-size:var(--default-title-size);
@@ -193,7 +186,7 @@ button,
   border: none;
   cursor: pointer;
 
-  width: 100%;
+  width: 365px;
   display: flex;
   padding-left: 2%;
   background: transparent;

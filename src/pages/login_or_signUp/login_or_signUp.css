@@ -1,0 +1,39 @@
+:root {
+    --background-color: linear-gradient(
+      180deg,
+      #ea4f32 0%,
+      #f06b52 0.01%,
+      #f45033 0.02%,
+      #e80f5d 100%
+    );
+  
+    --color-white: #fff;
+    --text-color: #FFBABA;
+  }
+
+
+.login_or_signUp_page{
+    width: 375px;
+    height: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 27%;
+}
+
+.login_or_signUp_page>.subtitle_container>h2{
+    margin-bottom: 1%;
+}
+
+.login_or_signUp_page>.text_container{
+    padding-top: -1%;
+}
+
+.login_or_signUp_page>.button_container{
+    margin-top: 20%;
+    height: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;   
+}

@@ -83,7 +83,7 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
           Done
         </button>
         <p className="go-to-last" onClick={handleGoToLast} style={{ display: SkipButtonVisible ? 'block' : 'none' }}>
-          Skip the tutorial
+          Skip the tutorial&gt;
         </p>
       </div>
     </div>

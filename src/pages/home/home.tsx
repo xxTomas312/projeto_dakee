@@ -14,22 +14,17 @@ import art_icon from '../../images/art_f.png'
 import food_icon from '../../images/food_f.png'
 import music_icon from '../../images/music_f.png'
 
-
-
-
-
-  const handleSearch = (searchTerm: string) => {
-    console.log('Search term:', searchTerm);
-    // Perform your search logic here
-  };
-
-
   function Home_page() {
     const [aberto, setAberto] = useState(false);
     const [value, setValue] = useState(50);
 
     const handleSliderChange = (newValue: number) => {
       setValue(newValue);
+    };
+
+    const handleSearch = (searchTerm: string) => {
+      console.log('Search term:', searchTerm);
+      // Perform your search logic here
     };
     
     return(
@@ -47,7 +42,7 @@ import music_icon from '../../images/music_f.png'
                       <img src={filter_icon} alt="Filter icon" />
                       <p>Filters</p>
                   </button>
-                  <button className='search_btt'>Search&gt;</button> 
+                  <button type='button' className='search_btt'>Search&gt;</button> 
               </div>
               <div className='image_container'>
                   <img src={Luoa_icon} alt="" />

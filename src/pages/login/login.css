@@ -1,68 +1,17 @@
-:root {
-    --background-color: linear-gradient(
-      180deg,
-      #ea4f32 0%,
-      #f06b52 0.01%,
-      #f45033 0.02%,
-      #e80f5d 100%
-    );
-  
-    --color-white: #fff;
-    --text-color: #FFBABA;
-  }
-
-
-.login_or_signUp_page{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 95.4vh;
-    margin-top: 11%;
-    padding-top: 10%;
-}
-
-.login_or_signUp_page>.subtitle_container>h2{
-    margin-bottom: 1%;
-}
-
-.login_or_signUp_page>.text_container{
-    padding-top: -1%;
-}
-
-.login_or_signUp_page>.button_container{
-    margin-top: 20%;
-    height: 18%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;   
-}
-
-
-
-
-/*+++++++++++++++++++++++++++++++++*/
-/* LOGIN PAGE*/
-
 .login_page{
-    width: 94%;
-    height: 100%;
+    width: 375px;
+    height: 820px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 0.9%;
-    left: 0%;
-    padding: 3%;
     border: none;
     background: var(--background-color);
 }
 .login_page>.go-back{
-    margin-right: -1%;
+   
 }
 .login_page>.slogan_container{
-    padding-left: 0.3%;
+    padding-top: 0.8px;
 }
 .login_page>.slogan_container>img{
     padding-top: 26.6%;
@@ -75,13 +24,13 @@
   }
 
 .login_page>.info_container{
-    width: 350px;
-    height: 17.5%;
+    width: 375px;
+    height: 820px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 8%;
-    margin-top: 8%;
+
 }
 
 .login_page>.button_container{

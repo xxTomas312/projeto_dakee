@@ -5,7 +5,6 @@ import facebook from '../../images/face_icon.png'
 import Gmail from '../../images/gmail_icon.png'
 import Apple from '../../images/apple_icon.png'
 import Back_button from '../../images/back_b.png'
-import Google_Login from '../../components/google_login/google_login'
 import './signUp.css'
 import '../../App.css'
 
@@ -16,11 +15,11 @@ function Sign_up() {
     return(
         <>
         <section className="signUp_page">
-            <button className="go-back">
-            <Link to="/Login">
-                <img src={Back_button} alt="" />
-            </Link>
-            </button>
+        <Link className='logo_page' to="/Login_or_signUp"></Link>
+                <div className="go-back">
+                    <img src={Back_button} alt="" />
+                </div>
+
             <div className='slogan_container'>
             <img src={Logo_img} alt="Logo slogan" />
             </div>
