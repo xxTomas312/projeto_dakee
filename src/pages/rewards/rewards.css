@@ -1,0 +1,141 @@
+/*Rewards Page*/
+.rewards_page{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 375px;
+    height: 1269px;
+    overflow-y: scroll;
+    background: WHITE;
+}
+
+.rewards_page>.back-button{
+    width: 70px;
+    position: absolute;
+    top: 22px;
+    left: 2px;
+}
+.rewards_page>a>.back-button{
+    width: 70px;
+    position: absolute;
+    top: 22px;
+    left: 2px;
+}
+/*REWARD SUBTITLE CONTAINER*/
+
+.rewards_page>.subtitle_container{
+    margin-left: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 44px; 
+    color: #F0694F;
+}
+.rewards_page>.subtitle_container>h2{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.grid_container>.grid-item>.rating_reward,
+.rewards_page>.subtitle_container>.rating_container{
+    display: flex;
+    width: 60px;
+    height: 20px;
+    align-items: center;
+    font-size: 19px;
+    background: white;
+}
+
+.rewards_page>.subtitle_container>.rating_container>img{
+    width: 27px;
+    height: 27px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+}
+
+
+
+/*Grid CSS*/
+.grid_container{
+    width: 282px;
+    height: 930px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.grid_container>.grid-item{
+    width: 280px;
+    height: 280px;
+    border: 2px solid #F0694F;
+    border-radius: 20px;
+}
+
+
+.grid_container>.grid-item>.rating_reward{
+    font-size: 16px;
+    justify-content: center;
+    background: white;
+    margin-left: 229px;
+    margin-top: -8px;
+}
+.grid_container>.grid-item>.rating_reward>img{
+    width: 15px;
+    height: 15px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+}
+
+.grid-item>.brand{
+    font-size: 18px;
+    padding-left: 20px;
+    display: flex;
+    height: 20px;
+    align-items: center;
+    width: 300px;
+    margin-top: 3px;
+}
+.grid-item>.advertising_container>h2,
+.grid-item>.brand>h4{
+    margin: 0;
+}
+
+.grid-item>.advertising_container{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+.grid-item>.img_container{
+    margin-top: 2px;
+    margin-left: -6px;
+}
+.grid-item>.img_container>.ryanair_logo{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.grid-item>.img_container>.thaya_logo{
+    margin-top: -11px;
+}
+.grid-item>.button_more{
+    margin-top: -50px;
+    margin-left: 195px;
+}
+.grid-item>.thaya_button_more{
+    margin-top: -63px;
+    margin-left: 195px;
+}
+
+.grid-item>.thaya_button_more>.more_button,
+.grid-item>.button_more>.more_button{
+    border: none;
+    width: 80px;
+    height: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    color: #F0694F;
+}

@@ -11,7 +11,7 @@ const MeuComponente: React.FC<MeuComponenteProps> = ({ texto }) => {
   const [nextId, setNextId] = useState(0);
 
   const handleAddInput = () => {
-    if (inputs.length < 3) {
+    if (inputs.length < 2) {
       setInputs([...inputs, { id: nextId, value: '' }]);
       setNextId(nextId + 1);
     }

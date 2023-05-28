@@ -30,12 +30,9 @@
     margin-bottom: 20px;
 }
 
-.login_or_signUp_page>.text_container{
-    padding-top: -1%;
-}
+
 
 .login_or_signUp_page>.button_container{
-    margin-top: 25px;
     height: 18%;
     display: flex;
     flex-direction: column;

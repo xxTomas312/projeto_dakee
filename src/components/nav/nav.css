@@ -1,21 +1,27 @@
 .nav_container{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: end;
     height: 50px;
-    margin-top: 35px;
+    padding-top: 35px;
 }
 
 .nav_container>img{
     margin-right: 25px;
+    width: 74px;
 }
+
+
+.menu_page.active {
+    display: block;
+  }
 
 .menu_page>.subtitle_container>h2{
     position: absolute;
     width: 100px;
     height: 44px;
     left: 48px;
-    top: 113px;
+    top: 88px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -23,13 +29,14 @@
     font-size: 36px;
     line-height: 44px;
     /* identical to box height */
-
-
     color: #F0694F;
 }
 
 .menu_page>.back-button{
     width: 20%;
+    height: 50px;
+    background: white;
+    z-index: 1;
 }
 
 .link_container{
@@ -40,8 +47,8 @@
     flex-direction: column;
     text-decoration: none;
     position: absolute;
-    top: 32%;
-    left: 12.5%;
+    top: 268px;
+    left: 53px;
 }
 
 .link_container a{

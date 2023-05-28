@@ -14,9 +14,10 @@
 }
 
 .home_page{
-    width: 100%;
-    height: 100vh;
-    background: transparent;
+  position: fixed;
+    width: 375px;
+    height: 820px;
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +26,8 @@
 /*SUBTITLE*/
 .home_page>.subtitle_container{
     margin-right: 10%;
+    margin-top: -41px;
+    height: 100px;
 }
 
 /*MENU BUTTON*/
@@ -41,19 +44,17 @@
 
 /*FILTER AND SEARCH BUTTONS*/
 .home_button_container{
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    margin-right: 20%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-right: 20%;
 }
 .home_button_container>button{
     border: none;
     border-radius: 0;
-    width: 20%;
-    height: 24px;
-
+    width: 22%;
+    height: 7px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -68,7 +69,7 @@
     height: 40%;
 }
 .home_filter_btt>img{
-  width: 100px;
+  width: 20px;
 }
 .home_filter_btt>p{
     margin: 0;
@@ -82,7 +83,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 58%;
+    height: 455px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -102,14 +103,20 @@
 .menu_page{
   font-size: 24px;
   font-weight: bold;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 100%;
-  width: 100%;
-  height: 100%;
+  width: 375px;
+  height: 100vh;
+  max-height: 820px;
   background: white;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  overflow-y: hidden;
+  z-index: 2;
+}
+.filters_page{
+  opacity: 0.9;
 }
 
 /*FILTER PAGE*/
@@ -121,7 +128,7 @@
 /*BACK BUTTON*/
 .filters_page>.back-button{
   width: 20%;
-  margin-top: 11.7%;
+  margin-top: 16px;
 }
 
 /*SUBTITLE*/
@@ -143,7 +150,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   color: #F0694F;
 }
@@ -166,6 +173,8 @@
 .filters_page>.filter_main_container{
   height: 40%;
   padding: 15%;
+  padding-left: 68px;
+  margin-top: 9px;
 }
 
 .filter_btt_container{

@@ -11,30 +11,24 @@
     --text-color: #FFBABA;
 }
 
-
+.questionaire_page_1,
 .questionaire_page_2,
 .questionaire_page_5{
-  padding-left: 14%;
-  padding-right: 14%;
-  padding-top: 18%;
-  color: var(--color-white);
-  height: 97vh;
-  background: var(--background-color);
-}
-.questionaire_page_1{
-  padding-left: 14%;
-  padding-right: 14%;
-  padding-top: 24.2%;
+  padding-left: 35px;
+  padding-top: 76px;
   color: var(--color-white);
   height: 820px;
+  width: 375px;
   background: var(--background-color);
 }
+
 
 .questionaire_page_1>h1,
 .questionaire_page_2>h1,
 .questionaire_page_3>h1,
 .questionaire_page_4>h1,
 .questionaire_page_5>h1{
+  margin-top: 80px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -48,16 +42,6 @@
   margin-bottom: 6%;
 }
 
-.button_container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.swiper-to-next{
-  border: none;
-  opacity: 0.5;
-}
 
 
 /*Grid css build*/
@@ -72,7 +56,7 @@
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  width: 100%;
+  width: 300px;
 }
 .item {
   background-color: #ccc;
@@ -93,9 +77,7 @@
 }
 
 
-
-
-/*QUESTIONAIRE PAGE 2*/
+/*QUESTIONAIRE PAGE 2 Grid*/
 .questionaire_page_2>.grid{
   font-family: 'Inter';
   font-style: normal;
@@ -111,21 +93,22 @@
 
 /*QUESTIONAIRE PAGE 3*/
 .questionaire_page_3{
-  padding-left: 14%;
-  padding-right: 14%;
-  padding-top: 18%;
+  padding-left: 35px;
+  padding-top: 76px;
   color: var(--color-white);
-  height: 110vh;
+  background: var(--background-color);
+  height: 820px;
+  width: 375px;
   overflow-y: scroll;
 }
 .questionaire_page_3>.info_container{
-  width: 100%;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 .questionaire_page_3>.info_container>input{
-  width: 100%;
+  width: 300px;
   margin-top: 3%;
 }
 
@@ -134,11 +117,11 @@
 
 /*QUESTIONAIRE PAGE 4*/
 .questionaire_page_4{
-  padding-left: 14%;
-  padding-right: 14%;
-  padding-top: 24%;
+  padding-left: 35px;
+  padding-top: 76px;
   color: var(--color-white);
-  height: 111vh;
+  background: var(--background-color);
+  height: 1331px;
 }
 .questionaire_page_4>.grid>.item{
   display: flex;
@@ -150,11 +133,11 @@
   margin: 0;
   margin-top: 10%;
 }
-.questionaire_page_4>.grid{
-  padding-bottom: 100%;
-  
-}
 
+
+.questionaire_page_4>.button_container{
+  margin-top: -225px;
+}
 
 
 
@@ -173,5 +156,6 @@
   margin: 1%;
 }
 .questionaire_page_5>.button_container{
-  padding-top: 20%;
+  margin-top: 66px;
+  margin-left: -35px;
 }

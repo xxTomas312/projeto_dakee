@@ -22,9 +22,9 @@ import music_icon from '../../images/music_f.png'
       setValue(newValue);
     };
 
-    const handleSearch = (searchTerm: string) => {
-      console.log('Search term:', searchTerm);
-      // Perform your search logic here
+    const handleSearch = () => {
+      console.log('Search button clicked');
+      // Realize a lógica de pesquisa aqui
     };
     
     return(
@@ -42,7 +42,7 @@ import music_icon from '../../images/music_f.png'
                       <img src={filter_icon} alt="Filter icon" />
                       <p>Filters</p>
                   </button>
-                  <button type='button' className='search_btt'>Search&gt;</button> 
+                  <button type='button' onClick={handleSearch} className='search_btt'>Search &gt;</button> 
               </div>
               <div className='image_container'>
                   <img src={Luoa_icon} alt="" />

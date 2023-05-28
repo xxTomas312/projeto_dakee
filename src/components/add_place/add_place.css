@@ -20,15 +20,15 @@
 }
     
 .add_input_button{
-    border:0;
-    width: auto;
-    position: sticky;
-    height: 0;
-
-    font-weight: 400;
-    font-size: 15px;
-    opacity: 0.6;
-    margin-right: -3%;
+  border: 0;
+  width: auto;
+  position: sticky;
+  height: 0;
+  font-weight: 400;
+  font-size: 15px;
+  opacity: 0.4;
+  margin-right: 72px;
+  margin-top: 8px;
 }
 
   
@@ -45,9 +45,10 @@
 
   .coluna { 
     display: flex;
-    margin-bottom: 10px; /* espaço entre as colunas */
-    width: 88%;
-    margin-right: 12%;
+    margin-bottom: 5px;
+    width: 300px;
+    margin-right: 130px;
+    height: 50px;
   }
   
   .coluna input {

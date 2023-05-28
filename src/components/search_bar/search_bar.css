@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     width: 312px;
-    height: 40px;
+    height: 32px;
     border: 2px solid #ffff;
     border-radius: 25px;
     padding: 2px;
@@ -42,8 +42,22 @@
   width: 50px;
   height: 35px;
   border: none;
+  margin-top: 20px;
 }
 .search-bar button>img {
   width: 20px;
 
+}
+
+.search-bar .search-result {
+  position: fixed;
+  top: 34%;
+  left: 0;
+  width: 374px;
+  height: 2000px;
+  overflow-y: auto;
+  background: red;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
 }

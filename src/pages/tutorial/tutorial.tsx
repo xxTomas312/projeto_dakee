@@ -101,19 +101,17 @@ const items = [
 
   //PAGE 5
   <div className='tutorial_page_5' key="5">
-  <div className='subtitle_container'>
-    <h2>Done!</h2>
-    <br />
-    <h2>Let us ask five 
-    quick questions
-    before we start.</h2>
-  </div>
-  <div className='text_container'>
-    <p>You can edit your anwsers later.</p>
-  </div>
-  <div className='button_container'>
-  <Link to="/Questionaire"><button>OK</button></Link>
-  </div>
+    <div className='subtitle_container'>
+      <h2>Done!</h2>
+      <br />
+      <h2>Let us ask five quick questions before we start.</h2>
+    </div>
+    <div className='text_container'>
+      <p>You can edit your anwsers later.</p>
+    </div>
+    <div className='button_container'>
+      <Link to="/Questionaire"><button>OK</button></Link>
+    </div>
   </div>,
 ];
 

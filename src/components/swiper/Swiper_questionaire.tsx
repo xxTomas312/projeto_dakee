@@ -43,7 +43,7 @@ export const Swiper_q: React.FC<SwiperProps> = ({ items }) => {
             {item}
           <div className='button_container'>
             <button className="swiper-to-next" onClick={handleNext} style={{ display: NextButtonVisible ? 'block' : 'none' }}>
-              Next&gt;
+              Next &gt;
             </button>
             <button className="swiper-done" onClick={handleNext} style={{ display: DoneButtonVisible ? 'block' : 'none' }}>
               Done

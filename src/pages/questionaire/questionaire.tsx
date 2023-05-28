@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Swiper_Questionaire from '../../components/swiper/Swiper_q'
+import Swiper_Questionaire from '../../components/swiper/Swiper_questionaire'
 import Female from '../../images/female.svg'
 import Male from '../../images/male.png'
 import Horse from '../../images/horse.png'

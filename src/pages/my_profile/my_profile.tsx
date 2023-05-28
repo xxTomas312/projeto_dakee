@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Star from '../../images/star.png'
 import Profile_pic from '../../images/profile_pic.png'
 import RatingStars from '../../images/rating_stars.png'
 import back_btt_white from '../../images/back_button_f.png'
 import './my_profile.css'
-import Nav from '../../components/nav/nav'
+import Nav from '../../components/nav/nav_profile'
 
 function My_profile() {
     const [aberto, setAberto] = useState(false);
@@ -31,54 +31,13 @@ function My_profile() {
                     <img src={Star} alt="Star icon" />
                 </div>
                 <div className='buttons_container'>
-                    <button onClick={() => setAberto(true)}>Get rewards</button>
+                    <Link to="/Rewards"><button>Get rewards</button></Link>
                     <button>Saved rewards</button>
                     <button>Edit profile</button>
                     <button>Log out</button>
                 </div>
             </div>
         </section>
-
-
-        {aberto ? (
-            <section className="rewards_page">
-            <Nav></Nav>
-             <div className='subtitle_container'>
-                <h2>Rewards</h2>
-                <div className='rating_container'>
-                    <p></p>
-                    <img src="" alt="" />
-                </div>
-                <div className='grid_container'>
-                    <div className="grid-item">
-                        <div className='rating_reward'>
-                            <p>30</p>
-                            <img src="" alt="star" />
-                        </div>
-                        <div className='brand'>
-                            <h4>Vans</h4>
-                        </div>
-                        <div className='advertising_container'>
-                            <h2>-25%</h2>
-                        </div>
-                        <div className='img_container'>
-                            <img src="" alt="Vans logo" />
-                        </div>
-                        <div className='button_more'>
-                            <button className='more_button'>More&gt;</button>
-                        </div>
-                    </div>
-                    <div className="grid-item">
-
-                    </div>
-                    <div className="grid-item">
-
-                    </div> 
-                </div>
-             </div>
-            </section>
-      ) : null}
-
         </>
     )
 }
