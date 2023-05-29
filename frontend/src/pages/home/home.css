@@ -1,0 +1,271 @@
+
+:root {
+    --background-color: linear-gradient(
+      180deg,
+      #ea4f32 0%,
+      #f06b52 0.01%,
+      #f45033 0.02%,
+      #e80f5d 100%
+    );
+  
+    --color-white: #fff;
+    --color-secondary: #f0694f;
+    --text-color: #FFBABA;
+}
+
+.home_page{
+    width: 375px;
+    height: 820px;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/*SUBTITLE*/
+.home_page>.subtitle_container{
+    margin-right: 10%;
+    margin-top: -41px;
+    height: 100px;
+}
+
+/*MENU BUTTON*/
+.menu_button_container{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+    margin-top: 8%;
+}
+.menu_button_container>img{
+    width: 20%;
+}
+
+/*FILTER AND SEARCH BUTTONS*/
+.home_button_container{
+  width: 332px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.home_button_container>button{
+    border: none;
+    border-radius: 0;
+    width: 92px;
+    height: 7px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+.home_filter_btt{
+    border: none;
+    border-radius: 0%;
+    width: auto;
+    display: flex;
+    height: 40%;
+}
+.home_filter_btt>img{
+  width: 20px;
+}
+.home_filter_btt>p{
+    margin: 0;
+    margin-left: 8px;
+}
+
+
+/*IMAGE*/
+.image_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 455px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--color-white);
+}
+.image_container>img{
+    margin-bottom: 20%;
+}
+
+
+/*MENU PAGE*/
+.filters_page,
+.menu_page{
+  position: fixed;
+  font-size: 24px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 375px;
+  height: 100vh;
+  max-height: 820px;
+  background: white;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  overflow-y: hidden;
+  z-index: 2;
+}
+.filters_page{
+  opacity: 0.9;
+}
+
+/*FILTER PAGE*/
+.filters_page
+{
+  left: 0;
+  animation-name: slideIn;
+}
+/*BACK BUTTON*/
+.filters_page>.back-button{
+  width: 20%;
+  margin-top: 16px;
+}
+
+/*SUBTITLE*/
+
+.filters_page>p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  color: #F0694F;
+}
+.filters_subtitle_container{
+  display: flex;
+  width: 30%;
+  align-items: center;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #F0694F;
+}
+.filter_subtitle{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height */
+  color: #F0694F;
+  margin-top: 30px;
+}
+.filters_subtitle_container>img{
+  width: 18px;
+  height: 18px;
+  margin-right: 7px;
+  margin-top: 2px;
+}
+.filters_page>.filter_main_container{
+  height: 40%;
+  padding: 15%;
+  padding-left: 68px;
+  margin-top: 9px;
+}
+
+.filter_btt_container{
+  display:flex;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  color: #F0694F;
+}
+.filter_btt_container>div{
+  margin-right: 8px;
+}
+
+.advices_filter{
+  display: flex;
+  width: 57%;
+  justify-content: space-between;
+}
+.advice_btt_container{
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 15%;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #F0694F;
+}
+.advice_btt_container>img{
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+}
+.advice_btt_container>p{
+  margin-right:0;
+}
+.rating_container{
+  margin-left: 5px;
+}
+
+
+
+.slider_range_container{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #F0694F;
+  }
+
+
+
+
+
+
+
+.slide-enter {
+  animation-name: slideIn;
+}
+.slide-exit {
+  animation-name: slideOut;
+}
+
+@keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+

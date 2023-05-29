@@ -1,14 +1,25 @@
 version: '3'
 services:
-  projeto_dakee:
+
+  app:
+    build: 
+      context: frontend
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+    - 3000:3000
+    volumes:
+    - ./frontend:/workspace
+
+  api:
     build:
-      context: . 
-      dockerfile: dockerfile
-    command: uvicorn database.main:api --reload --host 0.0.0.0
+      context: backend 
+      dockerfile: Dockerfile
+    command: uvicorn main:api --reload --host 0.0.0.0
     ports:
       - 8000:8000
     volumes:
-      - .:/workspace:rw
+      - ./backend:/workspace:rw
     depends_on:
       db:
         condition: service_healthy
