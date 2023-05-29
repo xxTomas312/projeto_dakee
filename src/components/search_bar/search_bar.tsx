@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react';
 import './search_bar.css';
-import Search_btt from '../../images/search_btt.png'
+import Search_btt from '../../images/search_btt.png';
 
 interface SearchBarProps {
   onSearch: (searchTerm: string) => void;
@@ -22,8 +22,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
   return (
     <div className="search-bar">
-      <button type="button" onClick={handleSearch}><img src={Search_btt} alt="Search button" /></button>
-      <input type="text" placeholder="Choose a city..." onChange={handleInputChange} />
+      <div className="input-container">
+        <button type="button" onClick={handleSearch}>
+          <img src={Search_btt} alt="Search button" />
+        </button>
+        <input type="text" placeholder="Choose a city..." onChange={handleInputChange} />
+      </div>
       {searchResult && (
         <div className="search-result">
           {searchResult}

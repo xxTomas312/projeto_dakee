@@ -1,4 +1,5 @@
 /*Rewards Page*/
+.second_rewards_page,
 .rewards_page{
     position: relative;
     top: 0;
@@ -15,6 +16,8 @@
     top: 22px;
     left: 2px;
 }
+.get_reward>.back-button,
+.second_rewards_page>a>.back-button,
 .rewards_page>a>.back-button{
     width: 70px;
     position: absolute;
@@ -23,6 +26,8 @@
 }
 /*REWARD SUBTITLE CONTAINER*/
 
+.get_reward>.subtitle_container,
+.second_rewards_page>.subtitle_container,
 .rewards_page>.subtitle_container{
     margin-left: 40px;
     font-family: 'Inter';
@@ -37,6 +42,8 @@
     margin-top: 10px;
 }
 
+
+.second_rewards_page>div>.points_discount>.rating_reward,
 .grid_container>.grid-item>.rating_reward,
 .rewards_page>.subtitle_container>.rating_container{
     display: flex;
@@ -81,6 +88,8 @@
     margin-left: 229px;
     margin-top: -8px;
 }
+.second_rewards_page>.button_container>button>.rating_reward,
+.second_rewards_page>div>.points_discount>.rating_reward,
 .grid_container>.grid-item>.rating_reward>img{
     width: 15px;
     height: 15px;
@@ -128,7 +137,8 @@
 }
 
 .grid-item>.thaya_button_more>.more_button,
-.grid-item>.button_more>.more_button{
+.grid-item>.button_more>.more_button,
+.grid-item>.button_more>a>.more_button{
     border: none;
     width: 80px;
     height: 30px;

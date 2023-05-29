@@ -14,13 +14,14 @@
 }
 
 .home_page{
-  position: fixed;
+    position: fixed;
     width: 375px;
-    height: 820px;
+    max-height: 820px;
     background: var(--background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 }
 
 /*SUBTITLE*/
@@ -44,16 +45,15 @@
 
 /*FILTER AND SEARCH BUTTONS*/
 .home_button_container{
-  width: 100vw;
+  width: 332px;
   display: flex;
   flex-direction: column;
   align-items: end;
-  margin-right: 20%;
 }
 .home_button_container>button{
     border: none;
     border-radius: 0;
-    width: 22%;
+    width: 92px;
     height: 7px;
     font-family: 'Inter';
     font-style: normal;
@@ -73,7 +73,7 @@
 }
 .home_filter_btt>p{
     margin: 0;
-    margin-left: 10%;
+    margin-left: 8px;
 }
 
 
@@ -101,6 +101,7 @@
 /*MENU PAGE*/
 .filters_page,
 .menu_page{
+  position: fixed;
   font-size: 24px;
   font-weight: bold;
   position: fixed;

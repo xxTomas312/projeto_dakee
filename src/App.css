@@ -198,3 +198,10 @@ button,
 .go-back>img{
   width: 12px;
 }
+
+
+/*No_internet_img*/
+.No_internet_img{
+  position: absolute;
+  top: 0;
+}

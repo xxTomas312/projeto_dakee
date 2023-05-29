@@ -11,12 +11,15 @@
 
 .No_internet_page>.NoInternet_img_container{
     width: 100%;
+    height: auto;
     justify-content: center;
     display: flex;
     margin-top: 60px;
+    background: transparent;
 }
 .No_internet_page>.NoInternet_img_container>img{
     width: 270px;
+    height: 270px;
     margin-top: 10px;
 }
 

@@ -1,0 +1,115 @@
+.second_rewards_page{
+    overflow-y: scroll;
+    max-height: 820px;
+}
+
+.second_rewards_page>div>.points_discount{
+    width: 279px;
+    padding-left: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    color: #F0694F;
+}
+.points_discount>.rating_reward{
+    margin-top: 4px;
+}
+
+.second_rewards_page>.button_container>button>.rating_reward>img,
+.points_discount>.rating_reward>img{
+    width: 12px;
+    margin-left: 3px;
+    padding-bottom: 1px;
+}
+.points_discount>.rating_reward>p{
+    font-size: 13px;
+}
+div>hr{
+    width: 300px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #F0694F;
+    margin-top: 13px;
+}
+
+.second_rewards_page>.image_container{
+    height: 320px;
+}
+
+.second_rewards_page>.image_container>img{
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.second_rewards_page>.image_container>p{
+    width: 320px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #F0694F;
+}
+.second_rewards_page>.button_container{
+    width: 375px;
+    position: absolute;
+    top: 610px;
+}
+.second_rewards_page>.button_container>button{
+    border-color: #F0694F;
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #F0694F;
+
+    justify-content: center;
+    align-items: center;
+}
+.second_rewards_page>.button_container>button>.rating_reward{
+    display: flex;
+    align-items: center;
+    height: 10px;
+    margin-top: 3px;
+    margin-right: 15px;
+    font-weight: 700;
+}
+
+
+/*Get Rewards Page*/
+
+.get_reward{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 375px;
+    height: 820px;
+    background: white;
+}
+.get_reward>.subtitle_container>h2{
+    margin-bottom: 0;
+
+}
+.get_reward>.image_container>img{
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+}
+.get_reward>.text_container{
+    width: 350px;
+    padding-left: 20px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.get_reward>.text_container>p{
+    margin: 0;
+    padding-left: 14px;
+    color: #F0694F;
+}

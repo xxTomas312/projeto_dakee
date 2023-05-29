@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Star from '../../images/star.png'
-import Profile_pic from '../../images/profile_pic.png'
-import RatingStars from '../../images/rating_stars.png'
-import back_btt_white from '../../images/back_button_f.png'
 import backButton from '../../images/back_button_f.png'
 import star_icon from '../../images/star.png'
 import vans_logo from '../../images/vans_logo.png'
@@ -46,7 +42,7 @@ function Rewards_page() {
                         <img src={vans_logo} alt="Vans logo" />
                     </div>
                     <div className='button_more'>
-                        <button className='more_button'>More&gt;</button>
+                        <Link to="/Rewards_second_page"><button  className='more_button'>More&gt;</button></Link>
                     </div>
                 </div>
             
@@ -88,8 +84,8 @@ function Rewards_page() {
                 </div>
             </div>  
         </div>
-        </div>
-    </section>
-    </>
+    </div>
+</section>
+</>
 )}
 export default Rewards_page;
