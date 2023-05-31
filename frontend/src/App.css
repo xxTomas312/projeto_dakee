@@ -15,6 +15,15 @@
   --subtitle-size: 26.5px;
 }
 
+form{
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
 
 .body_frame{
   width: 375px;
@@ -176,6 +185,7 @@ button,
   animation-duration: 1s;
   animation-fill-mode: forwards; /* keeps the button visible after the animation */
 }
+
 
 @keyframes Button_show {
   0% { opacity: 0; }

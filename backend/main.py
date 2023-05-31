@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from routers import root
 from fastapi.middleware.cors import CORSMiddleware
-from models.api import Sign_Up, Sign_In
+from models.api import Sign_In_Api_Model, Sign_Up_Api_Model
 
 origins = [
     "*",
@@ -32,10 +32,10 @@ for router in routers:
 
 
 
-@api.post("/signup", response_model=Sign_Up)
+@api.post("/signup", response_model=Sign_Up_Api_Model)
 def signup():
     pass
 
-@api.post("/login", response_model=Sign_In)
+@api.post("/login", response_model=Sign_In_Api_Model)
 def signin():
     pass

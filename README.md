@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# Dakee App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação construida em React TypeScript com um backend em Python. O projeto possui duas pastas principais, `backend` e `frontend`, cada uma com sua respectiva funcionalidade.
 
-## Available Scripts
+## Estrutura do Projeto
 
-In the project directory, you can run:
+Aqui está a estrutura do projeto:
 
-### `npm start`
+backend/
+|-- pyproject.toml
+|-- routers/
+| |-- root.py /*Localização dos Endpoints*/
+|-- models/
+| |--database.py /*Modelos das bases de dados*/
+| |--api.py
+|-- controllers/
+|-- clients/ /*Base de dados do cliente*/
+| |--database.py 
+|-- config.py
+|-- main.py
+|-- Dockerfile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+frontend/
+|-- build/
+|-- public/
+|-- src/
+| |-- Components /*Componentes utilizados nas páginas*/
+| |-- images /*Imagens e icons utilizados nas páginas*/
+| |-- Pages /*Páginas da App*/
+| |-- App.tsx
+| |-- App.css
+| |-- index.tsx
+| |-- index.css
+| |-- outros_arquivos.tsx
+|-- package.json
+|-- package-lock.json
+|-- tsconfig.json
+|-- .prettierrc
+|-- Dockerfile
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+.gitgnore/
+docker-compose.yml/
+README.md/
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- A pasta `backend` contém o código do servidor em Python, a pasta da base de dados do servidor e do cliente, os endpoints relacionados, os modelos de negócio e os modelos da base de dados.
+- A pasta `frontend` contém os arquivos relacionados ao frontend da aplicação.
 
-### `npm run build`
+## Pré-requisitos
+- Python (versão 3.11)
+- Node.js (versão X.X.X)
+- Docker (versão X.X.X)
+- Outros requisitos específicos...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Configuração do Ambiente
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone este repositório.
 
-### `npm run eject`
+- git clone <https://github.com/xxTomas312/projeto_dakee.git>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Instale as dependências do Node.js.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- npm i
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Executando o Projeto
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Execute os comandos para construir e executar a aplicação usando o Docker:
 
-## Learn More
+- docker-compose build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- docker-compose up
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+
+## Contribuição
+
+Se você quiser contribuir para este projeto, siga as etapas abaixo:
+
+1. Faça um fork deste repositório.
+2. Crie um branch com a sua feature: `git checkout -b minha-feature`
+3. Faça commit das suas alterações: `git commit -m 'Minha nova feature'`
+4. Faça push para o branch criado: `git push origin minha-feature`
+5. Envie um pull request.

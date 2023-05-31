@@ -30,10 +30,14 @@
   padding-right: 91px;
 }
 
-.signUp_page>.info_container{
+.signUp_page>form>.info_container{
     width: 360px;
     height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 10px;
+}
+.signUp_page>form>.button_container>button{
+  padding-right: 10px;
 }

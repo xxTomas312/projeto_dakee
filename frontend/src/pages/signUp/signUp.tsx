@@ -63,14 +63,14 @@ function Sign_up() {
             <h2>Sign up <br/>with e-mail</h2>
             </div>
             <form onSubmit={handleSubmit}>
-                <div className='info_container'>
-                    <input className='info_input' value={name} type="text" placeholder='Name' onChange={(e) => setName(e.target.value)} />
-                    <input className='info_input' value={email} type="text" placeholder='E-mail'  onChange={(e) => setEmail(e.target.value)}/>
-                    <input className='info_input' value={password} type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
-            </div>
-                <div className='button_container'>
-                    <button type="submit" onClick={CreateAccount}>Sign up</button>
-                </div>
+              <div className='info_container'>
+                  <input className='info_input' value={name} type="text" placeholder='Name' onChange={(e) => setName(e.target.value)} />
+                  <input className='info_input' value={email} type="text" placeholder='E-mail'  onChange={(e) => setEmail(e.target.value)}/>
+                  <input className='info_input' value={password} type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
+              </div>
+              <div className='button_container'>
+                  <button type="submit" onClick={CreateAccount}>Sign up</button>
+              </div>
             </form>
             <div className='social_info'>
                 <p>or sign up using:</p>
