@@ -11,6 +11,8 @@ import Rewards from './pages/rewards/rewards';
 import No_internet from './pages/no_internet/no_internet';
 import Login from './pages/login/login';
 import Rewards_second_page from './pages/rewards_second_page/rewards_second_page'
+import Chat from './pages/chat/chat'
+import Messages_page from './pages/chat/messages/messages'
 
 function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -47,6 +49,8 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Rewards_second_page" element={<Rewards_second_page />} />
           <Route path="/Rewards" element={<Rewards />} />
+          <Route path="/Chat" element={<Chat />} />
+          
           
         </Routes>
       )}

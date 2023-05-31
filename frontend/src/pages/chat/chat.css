@@ -1,0 +1,117 @@
+:root {
+    --background-color: linear-gradient(
+      180deg,
+      #ea4f32 0%,
+      #f06b52 0.01%,
+      #f45033 0.02%,
+      #e80f5d 100%
+    );
+  
+    --color-white: #fff;
+    --color-secondary: #f0694f;
+    --text-color: #FFBABA;
+}
+.local_chat_page,
+.traveller_chat_page{
+    width: 375px;
+    height: 820px;
+    background: var(--color-white);
+}
+.local_chat_page{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.local_chat_page>.back-button,
+.traveller_chat_page>a>.back-button{
+    width: 70px;
+    position: absolute;
+    top: 22px;
+    left: 2px;
+}
+
+.local_chat_page>.subtitle_container,
+.traveller_chat_page>.subtitle_container{
+    margin-left: 40px;
+    color: #f0694f;
+}
+.local_chat_page>div>.chat_button_container,
+.traveller_chat_page>div>.chat_button_container{
+    width: 228px;
+    margin-left: 75px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.chat_button{
+    color: #f0694f;
+    border: none;
+    width: 120px;
+    height: 50px;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.users{
+    display: flex;
+    width: 375px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.users>img{
+    width: 70px;
+}
+.traveller_users_container{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.traveller_users_container>button{
+    border: none;
+    border-radius: 0;
+    width: 300px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+.user_info{
+    color: #f0694f;
+    height: 50px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: 10px;
+    align-items: self-start;
+}
+.user_info>p{
+    margin-top: 7px;
+}
+
+.user_info>img{
+    width: 60px;
+}
+
+.name_and_distance{
+    width: auto;
+    height: 20px;
+    align-items: center;
+    display: flex;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.user_info>p{
+    width: 250px;
+    text-align: start;
+}
