@@ -19,14 +19,6 @@ import Nature from '../../images/nature.png'
 import Food from '../../images/food.png'
 import MeuComponente from '../../components/add_place/add_place';
 
-
-
-const createUser = () => {
-  // Retrieve the questionnaire responses from the component state or any other source
-  const questionnaireResponses = {
-    // Add your questionnaire responses here based on the user's selections
-  };
-
 const items = [
     //PAGE 1
     <div className='questionaire_page_1' key="1">
@@ -132,36 +124,11 @@ const items = [
     </div>
     <div className='button_container'>
       <Link to='/Home'>
-        <button onClick={createUser}>Ok</button>
+        <button>Ok</button>
       </Link>
     </div>
   </div>,
 ];
-
-
-
-  // Make a POST request to your API endpoint to create a user with the questionnaire responses
-  fetch('http://localhost:3000/database/routers/users', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(questionnaireResponses),
-  })
-    .then(response => response.json())
-    .then(data => {
-      // Handle the response data, such as displaying a success message or redirecting the user
-      console.log('User created:', data);
-    })
-    .catch(error => {
-      // Handle any errors that occur during the request
-      console.error('Error creating user:', error);
-    });
-};
-  
-
-  
-
 
   const App: React.FC = () => {
     return (

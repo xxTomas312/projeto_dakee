@@ -50,8 +50,6 @@ function App() {
           <Route path="/Rewards_second_page" element={<Rewards_second_page />} />
           <Route path="/Rewards" element={<Rewards />} />
           <Route path="/Chat" element={<Chat />} />
-          
-          
         </Routes>
       )}
     </>
